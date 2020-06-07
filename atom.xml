@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sfarl.github.io/"/>
-  <updated>2020-06-07T12:37:10.517Z</updated>
+  <updated>2020-06-07T15:14:14.750Z</updated>
   <id>sfarl.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="sfarl.github.io/2020/06/05/git/"/>
     <id>sfarl.github.io/2020/06/05/git/</id>
     <published>2020-06-05T00:56:45.000Z</published>
-    <updated>2020-06-07T12:37:10.517Z</updated>
+    <updated>2020-06-07T15:14:14.750Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>为什么是windows下呢，其实linux我也在虚拟机上对比过，发现git bash 和ubuntu 的命令行是没什么区别的（应该说是我没发现问题，毕竟用的比较浅。)</p><p>git bash的安装和使用可以看着<br><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git-pro</a><br>这是我个人觉得非常好的介绍，有中文版。</p><p>关于命令行的操作，git bash的使用和linux的控制台一致，入门可以看这<br><a href="https://missing-semester-cn.github.io" target="_blank" rel="noopener">The Missing Semester of Your CS Education</a>，带有中文版，视频可以在b站上面找。反正我学完后日常操作没碰到什么困难。</p><p>有了这两个，git bash的操作就没问题了。</p><a id="more"></a><h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><p>hexo博客的搭建我主要是基于这篇博客<br><a href="http://blog.haoji.me/build-blog-website-by-hexo-github.html?from=xa#hexo-jian-jie" target="_blank" rel="noopener">使用hexo+github搭建免费个人博客详细教程</a>我就不过多的重复了。</p><p>补充一些上述博客没提到的点。</p><ol><li>md是markdown文件，我目前使用的编辑器是atom，优点是插件众多，git hub直连，但有一个很明显的缺点，中文输入有bug，经常按了键盘没反应，也没找到相关的解决方案，希望能解决，不行就转vscode了。</li><li>博客主题，<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">yilia</a>已经几年没更新了，有网友基于yilia，建了<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">yilia-plus</a>,可以直接采用yilia-plus，blog的配置，在根目录的config，和theme/yilia-plus/下的config下面修改。</li><li>我现在改用vscode了，非常流畅，包也齐全。不用再受atom输入的气了！！！</li><li>我换yilia-pro了。</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>为什么是windows下呢，其实linux我也在虚拟机上对比过，发现git bash 和ubuntu 的命令行是没什么区别的（应该说是我没发现问题，毕竟用的比较浅。)</p><p>git bash的安装和使用可以看这个<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git-pro</a>这是我个人觉得非常好的介绍，有中文版。</p><p>关于命令行的操作，git bash的使用和linux的控制台一致，入门可以看这<a href="https://missing-semester-cn.github.io" target="_blank" rel="noopener">The Missing Semester of Your CS Education</a>，带有中文版，视频可以在b站上面找。反正我学完后日常操作没碰到什么困难。</p><p>有了这两个，git bash的操作就没问题了。</p><a id="more"></a><h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><p>hexo博客的搭建我主要是基于这篇博客<a href="http://blog.haoji.me/build-blog-website-by-hexo-github.html?from=xa#hexo-jian-jie" target="_blank" rel="noopener">使用hexo+github搭建免费个人博客详细教程</a>我就不过多的重复了。</p><p>补充一些上述博客没提到的点。</p><ol><li>md是markdown文件，我目前使用的编辑器是atom，优点是插件众多，git hub直连，但有一个很明显的缺点，中文输入有bug，经常按了键盘没反应，也没找到相关的解决方案，希望能解决，不行就转vscode了。</li><li>博客主题，<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">yilia</a>已经几年没更新了，有网友基于yilia，建了<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">yilia-plus</a>,可以直接采用yilia-plus，blog的配置，在根目录的config，和theme/yilia-plus/下的config下面修改。</li><li>我现在改用vscode了，非常流畅，包也齐全。不用再受atom输入的气了！！！</li><li>我换yilia-plus了。</li></ol>]]></content>
     
     <summary type="html">
     
