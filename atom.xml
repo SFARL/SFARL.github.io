@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SFARL的博客</title>
+  
+  <subtitle>守住底线-&gt;追求**</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="sfarl.github.io/"/>
+  <updated>2020-06-07T11:55:16.963Z</updated>
+  <id>sfarl.github.io/</id>
+  
+  <author>
+    <name>SFARL</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用github和hexo搭建博客</title>
+    <link href="sfarl.github.io/2020/06/05/git/"/>
+    <id>sfarl.github.io/2020/06/05/git/</id>
+    <published>2020-06-05T00:56:45.000Z</published>
+    <updated>2020-06-07T11:55:16.963Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>为什么是windows下呢，其实linux我也在虚拟机上对比过，发现git bash 和ubuntu 的命令行是没什么区别的（应该说是我没发现问题，毕竟用的比较浅。)</p><p>git bash的安装和使用可以看着<br><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git-pro</a><br>这是我个人觉得非常好的介绍，有中文版。</p><p>关于命令行的操作，git bash的使用和linux的控制台一致，入门可以看这<br><a href="https://missing-semester-cn.github.io" target="_blank" rel="noopener">The Missing Semester of Your CS Education</a>，带有中文版，视频可以在b站上面找。反正我学完后日常操作没碰到什么困难。</p><p>有了这两个，git bash的操作就没问题了。</p><a id="more"></a><h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><p>hexo博客的搭建我主要是基于这篇博客<br><a href="http://blog.haoji.me/build-blog-website-by-hexo-github.html?from=xa#hexo-jian-jie" target="_blank" rel="noopener">使用hexo+github搭建免费个人博客详细教程</a>我就不过多的重复了。</p><p>补充一些上述博客没提到的点。</p><ol><li>md是markdown文件，我目前使用的编辑器是atom，优点是插件众多，git hub直连，但有一个很明显的缺点，中文输入有bug，经常按了键盘没反应，也没找到相关的解决方案，希望能解决，不行就转vscode了。</li><li>博客主题，<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">yilia</a>已经几年没更新了，有网友基于yilia，建了<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">yilia-plus</a>,可以直接采用yilia-plus，blog的配置，在根目录的config，和theme/yilia-plus/下的config下面修改。</li><li>我现在改用vscode了，非常流畅，包也齐全。不用再受atom输入的气了！！！</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      windows下git和hexo的配置。
+    
+    </summary>
+    
+    
+    
+      <category term="博客搭建" scheme="sfarl.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大家好哇</title>
+    <link href="sfarl.github.io/2020/06/04/hello-world/"/>
+    <id>sfarl.github.io/2020/06/04/hello-world/</id>
+    <published>2020-06-04T07:22:11.211Z</published>
+    <updated>2020-06-05T01:01:18.269Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第一篇博客，介绍一下自己写博客的初衷。"><a href="#第一篇博客，介绍一下自己写博客的初衷。" class="headerlink" title="第一篇博客，介绍一下自己写博客的初衷。"></a>第一篇博客，介绍一下自己写博客的初衷。</h2><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>其实我想写博客的想法很久之前就有了，但因为各种各样的原因耽误了，其实主要是自己不迫切。想记录一些自己的生活，学习心得，同时锻炼自己的文笔。大学以后，生活虽说多姿多彩，但偶尔回望记得却不太多，只记得一些事件，而忘记了许多珍贵的细节。学东西总是在输入，很少输出，导致自己也不太清楚学懂没。</p><p>这次碰上疫情，打乱了自己许多计划，在找暑期实习的时候，也找到了自己今后想发展的方向，却发现自己的知识储备和能力并不足以让我通过面试。于是便打算等大四开始，没课了，便好好的补救补救，本来博客按计划也是在大四的时候再开始的。但时不待我，准备了许久托福考试取消，期末考试安排到8月低，打乱了我的实习，中美关系迅速恶劣。我在前年初得计划基本被破坏的一干二净，不得已，只能加快自己的步伐，加速！！<br><img src="/assets/photos/visa.png" alt=""></p><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>博客主要分享的是一些cs基础课的上课理解和作业，算是数学转大数据开发的记录吧，偶尔穿插一些游记？日记？</p><p>更新频率的话大概一周一次吧，将知识融会贯通并输出并不是件容易的事情，定下个固定更新频率也是对自己的一种监督，希望能坚持下去。</p><h2 id="日后再更"><a href="#日后再更" class="headerlink" title="日后再更"></a>日后再更</h2>]]></content>
+    
+    <summary type="html">
+    
+      第一篇博客，介绍一下自己写博客的初衷。
+    
+    </summary>
+    
+    
+      <category term="first" scheme="sfarl.github.io/categories/first/"/>
+    
+    
+      <category term="初衷" scheme="sfarl.github.io/tags/%E5%88%9D%E8%A1%B7/"/>
+    
+  </entry>
+  
+</feed>
