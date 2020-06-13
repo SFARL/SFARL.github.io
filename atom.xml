@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sfarl.github.io/"/>
-  <updated>2020-06-07T15:14:14.750Z</updated>
+  <updated>2020-06-13T11:30:09.482Z</updated>
   <id>sfarl.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>csapp_chapter1</title>
+    <link href="sfarl.github.io/2020/06/13/csapp-chapter1/"/>
+    <id>sfarl.github.io/2020/06/13/csapp-chapter1/</id>
+    <published>2020-06-13T11:24:20.000Z</published>
+    <updated>2020-06-13T11:30:09.482Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p><ol><li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li><li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a><h2 id="1-COURSE-OVERVIEW"><a href="#1-COURSE-OVERVIEW" class="headerlink" title="1.COURSE-OVERVIEW"></a>1.COURSE-OVERVIEW</h2>从编程者的角度来讲述计算机系统。这也是为什么我第一门课选择这个的原因，因为自己是数学系的，之前学习的内容主要是偏向于算法和一些比较抽象的编程，没这么关注到计算机的底层实现（也许是大计基没上心。。。）所以选择这门课做为第一门补充课，希望能对计算机系统有个整体的认识，虽说自己之后是打算做数据挖掘，但对于基础的东西个人觉得还是需要有所了解。</li></ol><h3 id="主要内容包括："><a href="#主要内容包括：" class="headerlink" title="主要内容包括："></a>主要内容包括：</h3><ol><li>COMPUTER ARITHMETIC (计算机算术规则)</li><li>ASSEMBLY (汇编)</li><li>MEMORY (内存)</li><li>ASYMPTOTIC COMPLEXITY (渐近性?)</li><li>IO (写入写出)</li></ol><h3 id="一些重要的概念："><a href="#一些重要的概念：" class="headerlink" title="一些重要的概念："></a>一些重要的概念：</h3><ol><li><p>Amdahl 定律</p><p>  系统某部分执行时间和总时间比例为$\alpha$，而该部分性能提升为$k$，可计算加速比S<br>  $$S=\frac{T_{old}}{T_{new}} =\frac{1}{(1-\alpha)+\alpha / k}$$</p></li><li><p>并发和并行</p><ul><li>并发(concurrancy):同时具有多个活动的系统。</li><li>并行(parallelism):使用并发来使系统运行更快。</li></ul></li><li><p>一些抽象</p><ul><li>文件是 I/O  设备的抽象。</li><li>虚拟内存是程序存储器的抽象。</li><li>进程(process)是正在运行程序的抽象。</li><li>虚拟机是整个计算机的抽象。</li></ul></li></ol><h2 id="2-BITS-BYTES-INTEGER-float"><a href="#2-BITS-BYTES-INTEGER-float" class="headerlink" title="2.BITS,BYTES,INTEGER,float"></a>2.BITS,BYTES,INTEGER,float</h2><h3 id="BITS-AND-BYTES"><a href="#BITS-AND-BYTES" class="headerlink" title="BITS AND BYTES"></a>BITS AND BYTES</h3><ol><li>布尔代数的and, or, not, Xor运算形成布尔环(代数中的环）。</li><li>集合运算的Intersection, Union, Symmetric difference, Complement。</li><li>逻辑运算的&amp;&amp;, ||, !.</li><li>左移(left shift): 补0。 右移：逻辑右移补0，算术右移根据补码补0/1.</li></ol><h3 id="INT"><a href="#INT" class="headerlink" title="INT"></a>INT</h3><ol><li>represent<ul><li>Unsigned 和 Two’s Complement (补码)。</li><li>Range: $2^w-1$ 和 $[-2^{w-1}, 2^{w-1}-1]$</li><li><img src="D:/assets/photos/bits_T2U.png" alt="无符号整型和补码之间的关系"></li><li>扩张和截断，扩张是填充符号位，截断是取模。</li></ul></li><li>arithmetic<ul><li>对于加减乘，因为会溢出，通常的做法不是扩大存储的字节，而是阶段取模。</li><li>$u*2^k = u &lt;&lt; k$ 乘法左移，除法右移。</li></ul></li><li>内存可以看作是一个大的线性数组，每个地方都有对应的地址。</li></ol><h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><ol><li><p>IEEE float:<br>  $$(-1)^{S}\ \mathrm{M}\  2^{\mathrm{E}}$$</p><ul><li><p>S 决定正负，M是[1.0, 2.0)的二进制小数，E决定阶数。<br>以32位的float为例，0-22位是frac，即M; 23-30位是exp,$E = exp - bias$, 其中$bias = 2^{k-1} -1$, 这样做的好处是exp变为unsign的了；31位是S。</p></li><li><p>根据exp的值，分为规格化(normalized)， 非规格化(denormalized(阶码全为0)), 和特殊值(infinity(阶码全1，分数为0), nan(阶码全1，分数不为0)).</p></li><li><p>注意到浮点数的分布越趋于0越密集。</p></li></ul></li><li><p>舍入(rounding) 默认向偶数舍入。</p></li><li><p>arithmetic</p><ul><li>加：可交换不可结合(大数吃小数)，Abelian Group. 有单调性。</li><li>移位对其后加减</li><li>乘：可交换不可结合</li><li>$\mathrm{S} 1^{\wedge} \mathrm{S} 2$， $\mathrm{M} 1 \times \mathrm{M} 2$， $E 1+E 2$</li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。&quot;&gt;&lt;a href=&quot;#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-21
+      
+    
+    </summary>
+    
+    
+    
+      <category term="网课，CSAPP，第一章" scheme="sfarl.github.io/tags/%E7%BD%91%E8%AF%BE%EF%BC%8CCSAPP%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>使用github和hexo搭建博客</title>
