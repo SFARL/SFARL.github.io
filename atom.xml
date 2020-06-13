@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sfarl.github.io/"/>
-  <updated>2020-06-13T11:34:52.207Z</updated>
+  <updated>2020-06-13T11:54:31.957Z</updated>
   <id>sfarl.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="sfarl.github.io/2020/06/13/csapp-chapter1/"/>
     <id>sfarl.github.io/2020/06/13/csapp-chapter1/</id>
     <published>2020-06-13T11:24:20.000Z</published>
-    <updated>2020-06-13T11:34:52.207Z</updated>
+    <updated>2020-06-13T11:54:31.957Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p><ol><li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li><li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a><h2 id="1-COURSE-OVERVIEW"><a href="#1-COURSE-OVERVIEW" class="headerlink" title="1.COURSE-OVERVIEW"></a>1.COURSE-OVERVIEW</h2>从编程者的角度来讲述计算机系统。这也是为什么我第一门课选择这个的原因，因为自己是数学系的，之前学习的内容主要是偏向于算法和一些比较抽象的编程，没这么关注到计算机的底层实现（也许是大计基没上心。。。）所以选择这门课做为第一门补充课，希望能对计算机系统有个整体的认识，虽说自己之后是打算做数据挖掘，但对于基础的东西个人觉得还是需要有所了解。</li></ol><h3 id="主要内容包括："><a href="#主要内容包括：" class="headerlink" title="主要内容包括："></a>主要内容包括：</h3><ol><li>COMPUTER ARITHMETIC (计算机算术规则)</li><li>ASSEMBLY (汇编)</li><li>MEMORY (内存)</li><li>ASYMPTOTIC COMPLEXITY (渐近性?)</li><li>IO (写入写出)</li></ol><a id="more"></a><h3 id="一些重要的概念："><a href="#一些重要的概念：" class="headerlink" title="一些重要的概念："></a>一些重要的概念：</h3><ol><li><p>Amdahl 定律</p><p>  系统某部分执行时间和总时间比例为$\alpha$，而该部分性能提升为$k$，可计算加速比S<br>  $$S=\frac{T_{old}}{T_{new}} =\frac{1}{(1-\alpha)+\alpha / k}$$</p></li><li><p>并发和并行</p><ul><li>并发(concurrancy):同时具有多个活动的系统。</li><li>并行(parallelism):使用并发来使系统运行更快。</li></ul></li><li><p>一些抽象</p><ul><li>文件是 I/O  设备的抽象。</li><li>虚拟内存是程序存储器的抽象。</li><li>进程(process)是正在运行程序的抽象。</li><li>虚拟机是整个计算机的抽象。</li></ul></li></ol><h2 id="2-BITS-BYTES-INTEGER-float"><a href="#2-BITS-BYTES-INTEGER-float" class="headerlink" title="2.BITS,BYTES,INTEGER,float"></a>2.BITS,BYTES,INTEGER,float</h2><h3 id="BITS-AND-BYTES"><a href="#BITS-AND-BYTES" class="headerlink" title="BITS AND BYTES"></a>BITS AND BYTES</h3><ol><li>布尔代数的and, or, not, Xor运算形成布尔环(代数中的环）。</li><li>集合运算的Intersection, Union, Symmetric difference, Complement。</li><li>逻辑运算的&amp;&amp;, ||, !.</li><li>左移(left shift): 补0。 右移：逻辑右移补0，算术右移根据补码补0/1.</li></ol><h3 id="INT"><a href="#INT" class="headerlink" title="INT"></a>INT</h3><ol><li>represent<ul><li>Unsigned 和 Two’s Complement (补码)。</li><li>Range: $2^w-1$ 和 $[-2^{w-1}, 2^{w-1}-1]$</li><li>无符号整型和补码之间的关系.<img src="/assets/photos/bits_T2U.png" alt=""></li><li>扩张和截断，扩张是填充符号位，截断是取模。</li></ul></li><li>arithmetic<ul><li>对于加减乘，因为会溢出，通常的做法不是扩大存储的字节，而是阶段取模。</li><li>$u*2^k = u &lt;&lt; k$ 乘法左移，除法右移。</li></ul></li><li>内存可以看作是一个大的线性数组，每个地方都有对应的地址。</li></ol><h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><ol><li><p>IEEE float:<br>  $$(-1)^{S}\ \mathrm{M}\  2^{\mathrm{E}}$$</p><ul><li><p>S 决定正负，M是[1.0, 2.0)的二进制小数，E决定阶数。<br>以32位的float为例，0-22位是frac，即M; 23-30位是exp,$E = exp - bias$, 其中$bias = 2^{k-1} -1$, 这样做的好处是exp变为unsign的了；31位是S。</p></li><li><p>根据exp的值，分为规格化(normalized)， 非规格化(denormalized(阶码全为0)), 和特殊值(infinity(阶码全1，分数为0), nan(阶码全1，分数不为0)).</p></li><li><p>注意到浮点数的分布越趋于0越密集。</p></li></ul></li><li><p>舍入(rounding) 默认向偶数舍入。</p></li><li><p>arithmetic</p><ul><li>加：可交换不可结合(大数吃小数)，Abelian Group. 有单调性。</li><li>移位对其后加减</li><li>乘：可交换不可结合</li><li>$\mathrm{S} 1^{\wedge} \mathrm{S} 2$， $\mathrm{M} 1 \times \mathrm{M} 2$， $E 1+E 2$</li></ul></li></ol>]]></content>
     
@@ -44,7 +44,11 @@
     
     
     
-      <category term="网课，CSAPP，第一章" scheme="sfarl.github.io/tags/%E7%BD%91%E8%AF%BE%EF%BC%8CCSAPP%EF%BC%8C%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+      <category term="网课" scheme="sfarl.github.io/tags/%E7%BD%91%E8%AF%BE/"/>
+    
+      <category term="CSAPP" scheme="sfarl.github.io/tags/CSAPP/"/>
+    
+      <category term="第一章" scheme="sfarl.github.io/tags/%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
     
   </entry>
   
@@ -53,7 +57,7 @@
     <link href="sfarl.github.io/2020/06/05/git/"/>
     <id>sfarl.github.io/2020/06/05/git/</id>
     <published>2020-06-05T00:56:45.000Z</published>
-    <updated>2020-06-07T15:14:14.750Z</updated>
+    <updated>2020-06-13T11:55:21.295Z</updated>
     
     <content type="html"><![CDATA[<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>为什么是windows下呢，其实linux我也在虚拟机上对比过，发现git bash 和ubuntu 的命令行是没什么区别的（应该说是我没发现问题，毕竟用的比较浅。)</p><p>git bash的安装和使用可以看这个<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git-pro</a>这是我个人觉得非常好的介绍，有中文版。</p><p>关于命令行的操作，git bash的使用和linux的控制台一致，入门可以看这<a href="https://missing-semester-cn.github.io" target="_blank" rel="noopener">The Missing Semester of Your CS Education</a>，带有中文版，视频可以在b站上面找。反正我学完后日常操作没碰到什么困难。</p><p>有了这两个，git bash的操作就没问题了。</p><a id="more"></a><h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><p>hexo博客的搭建我主要是基于这篇博客<a href="http://blog.haoji.me/build-blog-website-by-hexo-github.html?from=xa#hexo-jian-jie" target="_blank" rel="noopener">使用hexo+github搭建免费个人博客详细教程</a>我就不过多的重复了。</p><p>补充一些上述博客没提到的点。</p><ol><li>md是markdown文件，我目前使用的编辑器是atom，优点是插件众多，git hub直连，但有一个很明显的缺点，中文输入有bug，经常按了键盘没反应，也没找到相关的解决方案，希望能解决，不行就转vscode了。</li><li>博客主题，<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">yilia</a>已经几年没更新了，有网友基于yilia，建了<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">yilia-plus</a>,可以直接采用yilia-plus，blog的配置，在根目录的config，和theme/yilia-plus/下的config下面修改。</li><li>我现在改用vscode了，非常流畅，包也齐全。不用再受atom输入的气了！！！</li><li>我换yilia-plus了。</li></ol>]]></content>
     
@@ -66,6 +70,10 @@
     
     
       <category term="博客搭建" scheme="sfarl.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="git" scheme="sfarl.github.io/tags/git/"/>
+    
+      <category term="hexo" scheme="sfarl.github.io/tags/hexo/"/>
     
   </entry>
   
