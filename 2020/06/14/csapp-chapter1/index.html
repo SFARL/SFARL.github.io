@@ -6,23 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="sfarl.github.io">
-  <title>csapp_chapter1 | SFARL的博客</title>
+  <title>csapp-chapter1 | SFARL的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C1.COURSE-OVERVIEW从编程者的角度来讲述计算机系统。这也是为什么我第一门课选择这个的原因，因为自己是数学系的，之前学习的内容主要是偏向于算法和一些比较抽象的编程，没这么关注到计算机的底层实现（也">
+  <meta name="description" content="csapp-chapter1.md       &#x2F;* https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;vscode&#x2F;blob&#x2F;master&#x2F;extensions&#x2F;markdown-language-features&#x2F;media&#x2F;markdown.css *&#x2F; &#x2F;*------------------------------------------------------------">
 <meta property="og:type" content="article">
-<meta property="og:title" content="csapp_chapter1">
-<meta property="og:url" content="sfarl.github.io/2020/06/13/csapp-chapter1/index.html">
+<meta property="og:title" content="csapp-chapter1">
+<meta property="og:url" content="sfarl.github.io/2020/06/14/csapp-chapter1/index.html">
 <meta property="og:site_name" content="SFARL的博客">
-<meta property="og:description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C1.COURSE-OVERVIEW从编程者的角度来讲述计算机系统。这也是为什么我第一门课选择这个的原因，因为自己是数学系的，之前学习的内容主要是偏向于算法和一些比较抽象的编程，没这么关注到计算机的底层实现（也">
+<meta property="og:description" content="csapp-chapter1.md       &#x2F;* https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;vscode&#x2F;blob&#x2F;master&#x2F;extensions&#x2F;markdown-language-features&#x2F;media&#x2F;markdown.css *&#x2F; &#x2F;*------------------------------------------------------------">
 <meta property="og:image" content="/assets/photos/bits_T2U.png">
-<meta property="article:published_time" content="2020-06-13T11:24:20.000Z">
-<meta property="article:modified_time" content="2020-06-13T11:54:31.957Z">
+<meta property="article:published_time" content="2020-06-14T09:18:45.854Z">
+<meta property="article:modified_time" content="2020-06-14T09:18:45.859Z">
 <meta property="article:author" content="SFARL">
-<meta property="article:tag" content="网课">
-<meta property="article:tag" content="CSAPP">
-<meta property="article:tag" content="第一章">
+<meta property="article:tag" content="“数学，数据库，数据挖掘”">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/assets/photos/bits_T2U.png">
   
@@ -191,7 +189,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      csapp_chapter1
+      csapp-chapter1
     </h1>
   
 
@@ -203,8 +201,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/06/13/csapp-chapter1/" class="archive-article-date">
-        <time datetime="2020-06-13T11:24:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-13</time>
+<a href="/2020/06/14/csapp-chapter1/" class="archive-article-date">
+        <time datetime="2020-06-14T09:18:45.854Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
 </a>
 
   
@@ -217,7 +215,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">745字</span>
+      <span class="post-count">1.6k字</span>
     </span>
   </span>
 
@@ -226,7 +224,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">8分</span>
     </span>
   </span>
 </div>
@@ -237,12 +235,385 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p>
+    <!DOCTYPE html>
+<html>
+<head>
+<title>csapp-chapter1.md</title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<link rel="alternate" href="/atom.xml" title="SFARL的博客" type="application/atom+xml">
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="csapp-%E5%92%8C-cmu-introduction-to-computer-system-cs-15-213-2015-fall-%E7%9A%84%E7%AC%94%E8%AE%B0">CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1>
+<p>相关资料</p>
 <ol>
 <li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li>
-<li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a><h2 id="1-COURSE-OVERVIEW"><a href="#1-COURSE-OVERVIEW" class="headerlink" title="1.COURSE-OVERVIEW"></a>1.COURSE-OVERVIEW</h2>从编程者的角度来讲述计算机系统。这也是为什么我第一门课选择这个的原因，因为自己是数学系的，之前学习的内容主要是偏向于算法和一些比较抽象的编程，没这么关注到计算机的底层实现（也许是大计基没上心。。。）所以选择这门课做为第一门补充课，希望能对计算机系统有个整体的认识，虽说自己之后是打算做数据挖掘，但对于基础的东西个人觉得还是需要有所了解。</li>
+<li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a></li>
 </ol>
-<h3 id="主要内容包括："><a href="#主要内容包括：" class="headerlink" title="主要内容包括："></a>主要内容包括：</h3><ol>
+<h2 id="1course-overview">1.COURSE-OVERVIEW</h2>
+<p>从编程者的角度来讲述计算机系统。这也是为什么我第一门课选择这个的原因，因为自己是数学系的，之前学习的内容主要是偏向于算法和一些比较抽象的编程，没这么关注到计算机的底层实现（也许是大计基没上心。。。）所以选择这门课做为第一门补充课，希望能对计算机系统有个整体的认识，虽说自己之后是打算做数据挖掘，但对于基础的东西个人觉得还是需要有所了解。</p>
+<h3 id="%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9%E5%8C%85%E6%8B%AC">主要内容包括：</h3>
+<ol>
 <li>COMPUTER ARITHMETIC (计算机算术规则)</li>
 <li>ASSEMBLY (汇编)</li>
 <li>MEMORY (内存)</li>
@@ -250,17 +621,23 @@
 <li>IO (写入写出)</li>
 </ol>
 <a id="more"></a>
-<h3 id="一些重要的概念："><a href="#一些重要的概念：" class="headerlink" title="一些重要的概念："></a>一些重要的概念：</h3><ol>
-<li><p>Amdahl 定律</p>
-<p>  系统某部分执行时间和总时间比例为$\alpha$，而该部分性能提升为$k$，可计算加速比S<br>  $$S=\frac{T_{old}}{T_{new}} =\frac{1}{(1-\alpha)+\alpha / k}$$</p>
+<h3 id="%E4%B8%80%E4%BA%9B%E9%87%8D%E8%A6%81%E7%9A%84%E6%A6%82%E5%BF%B5">一些重要的概念：</h3>
+<ol>
+<li>
+<p>Amdahl 定律</p>
+<p>系统某部分执行时间和总时间比例为$\alpha$，而该部分性能提升为$k$，可计算加速比S</p>
+  <!-- ![](http://latex.codecogs.com/gif.latex?\\S=\frac{T_{old}}{T_{new}} =\frac{1}{(1-\alpha)+\alpha / k}) -->
+<p>$$S=\frac{T_{old}}{T_{new}} =\frac{1}{(1-\alpha)+\alpha / k}$$</p>
 </li>
-<li><p>并发和并行</p>
+<li>
+<p>并发和并行</p>
 <ul>
 <li>并发(concurrancy):同时具有多个活动的系统。</li>
 <li>并行(parallelism):使用并发来使系统运行更快。</li>
 </ul>
 </li>
-<li><p>一些抽象</p>
+<li>
+<p>一些抽象</p>
 <ul>
 <li>文件是 I/O  设备的抽象。</li>
 <li>虚拟内存是程序存储器的抽象。</li>
@@ -269,41 +646,55 @@
 </ul>
 </li>
 </ol>
-<h2 id="2-BITS-BYTES-INTEGER-float"><a href="#2-BITS-BYTES-INTEGER-float" class="headerlink" title="2.BITS,BYTES,INTEGER,float"></a>2.BITS,BYTES,INTEGER,float</h2><h3 id="BITS-AND-BYTES"><a href="#BITS-AND-BYTES" class="headerlink" title="BITS AND BYTES"></a>BITS AND BYTES</h3><ol>
+<h2 id="2bitsbytesintegerfloat">2.BITS,BYTES,INTEGER,float</h2>
+<h3 id="bits-and-bytes">BITS AND BYTES</h3>
+<ol>
 <li>布尔代数的and, or, not, Xor运算形成布尔环(代数中的环）。</li>
 <li>集合运算的Intersection, Union, Symmetric difference, Complement。</li>
 <li>逻辑运算的&amp;&amp;, ||, !.</li>
 <li>左移(left shift): 补0。 右移：逻辑右移补0，算术右移根据补码补0/1.</li>
 </ol>
-<h3 id="INT"><a href="#INT" class="headerlink" title="INT"></a>INT</h3><ol>
-<li>represent<ul>
-<li>Unsigned 和 Two’s Complement (补码)。</li>
+<h3 id="int">INT</h3>
+<ol>
+<li>represent
+<ul>
+<li>Unsigned 和 Two's Complement (补码)。</li>
 <li>Range: $2^w-1$ 和 $[-2^{w-1}, 2^{w-1}-1]$</li>
 <li>无符号整型和补码之间的关系.<img src="/assets/photos/bits_T2U.png" alt=""></li>
 <li>扩张和截断，扩张是填充符号位，截断是取模。</li>
 </ul>
 </li>
-<li>arithmetic<ul>
+<li>arithmetic
+<ul>
 <li>对于加减乘，因为会溢出，通常的做法不是扩大存储的字节，而是阶段取模。</li>
 <li>$u*2^k = u &lt;&lt; k$ 乘法左移，除法右移。</li>
 </ul>
 </li>
 <li>内存可以看作是一个大的线性数组，每个地方都有对应的地址。</li>
 </ol>
-<h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><ol>
-<li><p>IEEE float:<br>  $$(-1)^{S}\ \mathrm{M}\  2^{\mathrm{E}}$$</p>
+<h3 id="float">Float</h3>
+<ol>
+<li>
+<p>IEEE float:
+$$(-1)^{S}\ \mathrm{M}\  2^{\mathrm{E}}$$</p>
 <ul>
-<li><p>S 决定正负，M是[1.0, 2.0)的二进制小数，E决定阶数。<br>以32位的float为例，0-22位是frac，即M; 23-30位是exp,$E = exp - bias$, 其中$bias = 2^{k-1} -1$, 这样做的好处是exp变为unsign的了；31位是S。</p>
+<li>
+<p>S 决定正负，M是[1.0, 2.0)的二进制小数，E决定阶数。
+以32位的float为例，0-22位是frac，即M; 23-30位是exp,$E = exp - bias$, 其中$bias = 2^{k-1} -1$, 这样做的好处是exp变为unsign的了；31位是S。</p>
 </li>
-<li><p>根据exp的值，分为规格化(normalized)， 非规格化(denormalized(阶码全为0)), 和特殊值(infinity(阶码全1，分数为0), nan(阶码全1，分数不为0)).</p>
+<li>
+<p>根据exp的值，分为规格化(normalized)， 非规格化(denormalized(阶码全为0)), 和特殊值(infinity(阶码全1，分数为0), nan(阶码全1，分数不为0)).</p>
 </li>
-<li><p>注意到浮点数的分布越趋于0越密集。</p>
+<li>
+<p>注意到浮点数的分布越趋于0越密集。</p>
 </li>
 </ul>
 </li>
-<li><p>舍入(rounding) 默认向偶数舍入。</p>
+<li>
+<p>舍入(rounding) 默认向偶数舍入。</p>
 </li>
-<li><p>arithmetic</p>
+<li>
+<p>arithmetic</p>
 <ul>
 <li>加：可交换不可结合(大数吃小数)，Abelian Group. 有单调性。</li>
 <li>移位对其后加减</li>
@@ -312,6 +703,9 @@
 </ul>
 </li>
 </ol>
+
+</body>
+</html>
 
     
 
@@ -358,7 +752,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="sfarl.github.io/2020/06/13/csapp-chapter1/" title="csapp_chapter1" target="_blank">sfarl.github.io/2020/06/13/csapp-chapter1/</a>
+          <a href="sfarl.github.io/2020/06/14/csapp-chapter1/" title="csapp-chapter1" target="_blank">sfarl.github.io/2020/06/14/csapp-chapter1/</a>
         </li>
         
         <li>
@@ -375,25 +769,6 @@
   <div class="article-info article-info-index">
     
     
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网课</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSAPP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第一章</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
     
 
     
@@ -444,7 +819,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:sfarl.github.io/2020/06/13/csapp-chapter1/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:sfarl.github.io/2020/06/14/csapp-chapter1/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -488,7 +863,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><span class="toc-number">1.</span> <span class="toc-text">CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-COURSE-OVERVIEW"><span class="toc-number">1.1.</span> <span class="toc-text">1.COURSE-OVERVIEW</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要内容包括："><span class="toc-number">1.1.1.</span> <span class="toc-text">主要内容包括：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一些重要的概念："><span class="toc-number">1.1.2.</span> <span class="toc-text">一些重要的概念：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-BITS-BYTES-INTEGER-float"><span class="toc-number">1.2.</span> <span class="toc-text">2.BITS,BYTES,INTEGER,float</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BITS-AND-BYTES"><span class="toc-number">1.2.1.</span> <span class="toc-text">BITS AND BYTES</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#INT"><span class="toc-number">1.2.2.</span> <span class="toc-text">INT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Float"><span class="toc-number">1.2.3.</span> <span class="toc-text">Float</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#csapp-%E5%92%8C-cmu-introduction-to-computer-system-cs-15-213-2015-fall-%E7%9A%84%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1course-overview"><span class="toc-number">1.1.</span> <span class="toc-text">1.COURSE-OVERVIEW</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9%E5%8C%85%E6%8B%AC"><span class="toc-number">1.1.1.</span> <span class="toc-text">主要内容包括：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E9%87%8D%E8%A6%81%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.2.</span> <span class="toc-text">一些重要的概念：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2bitsbytesintegerfloat"><span class="toc-number">1.2.</span> <span class="toc-text">2.BITS,BYTES,INTEGER,float</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bits-and-bytes"><span class="toc-number">1.2.1.</span> <span class="toc-text">BITS AND BYTES</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#int"><span class="toc-number">1.2.2.</span> <span class="toc-text">INT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#float"><span class="toc-number">1.2.3.</span> <span class="toc-text">Float</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -515,9 +890,9 @@
     <script src="/lib/gitment.js"></script>
   
   <script>
-    <!-- id: "csapp_chapter1" -->
+    <!-- id: "csapp-chapter1" -->
     var gitment = new Gitment({
-      id: "20200613192420",
+      id: "20200614171845",
       owner: 'SFARL',
       repo: 'comment',
       oauth: {
@@ -685,18 +1060,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网课</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">CSAPP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">第一章</a>
               </li>
              
               <li class="article-tag-list-item">
