@@ -6,23 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="sfarl.github.io">
-  <title>SFARL的博客</title>
+  <title>csapp_chapter2 | SFARL的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="“数学，数据库，数据挖掘”">
-    <meta name="description" content="华南理工大学17级"> -->
-  
-  <meta name="description" content="华南理工大学17级">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SFARL的博客">
-<meta property="og:url" content="sfarl.github.io/index.html">
+  <meta name="description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C3.Machine-­Level-Programming  BASIC计算机执行机器代码，用字节序列编码低级的操作，包括处理数据，管理内存，读写存储设备上的数据，以及利用网络通信。GCC 以汇编代码的形式产生">
+<meta property="og:type" content="article">
+<meta property="og:title" content="csapp_chapter2">
+<meta property="og:url" content="sfarl.github.io/2020/09/02/csapp-chapter2/index.html">
 <meta property="og:site_name" content="SFARL的博客">
-<meta property="og:description" content="华南理工大学17级">
+<meta property="og:description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C3.Machine-­Level-Programming  BASIC计算机执行机器代码，用字节序列编码低级的操作，包括处理数据，管理内存，读写存储设备上的数据，以及利用网络通信。GCC 以汇编代码的形式产生">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/30/dq4QEj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/31/dX0z4O.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/31/dXDkz4.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/31/dXDgwq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/31/dXDz1e.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/31/dXfpjK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/31/dXI0Q1.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzPVUO.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzP1qP.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/wSwNPP.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/wSBBAs.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/wSrJOS.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/wpaAje.png">
+<meta property="article:published_time" content="2020-09-02T10:17:20.000Z">
+<meta property="article:modified_time" content="2020-09-02T10:17:59.689Z">
 <meta property="article:author" content="SFARL">
-<meta property="article:tag" content="“数学，数据库，数据挖掘”">
+<meta property="article:tag" content="网课">
+<meta property="article:tag" content="CSAPP">
+<meta property="article:tag" content="第二章">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/08/30/dq4QEj.png">
   
     <link rel="alternative" href="/atom.xml" title="SFARL的博客" type="application/atom+xml">
   
@@ -182,25 +196,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-csapp-chapter2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-csapp-chapter2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/09/02/csapp-chapter2/">csapp_chapter2</a>
-	
+    <h1 class="article-title" itemprop="name">
+      csapp_chapter2
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/09/02/csapp-chapter2/" class="archive-article-date">
         <time datetime="2020-09-02T10:17:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-02</time>
 </a>
@@ -208,6 +222,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.3k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -309,7 +344,59 @@
     
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/blogImg/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/blogImg/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          SFARL
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="sfarl.github.io/2020/09/02/csapp-chapter2/" title="csapp_chapter2" target="_blank">sfarl.github.io/2020/09/02/csapp-chapter2/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -338,16 +425,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/09/02/csapp-chapter2/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:sfarl.github.io/2020/09/02/csapp-chapter2/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/07/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">偏微分复习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -362,1584 +509,56 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-偏微分复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/08/07/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/">偏微分复习</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/08/07/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2020-08-07T05:45:41.255Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>基本概念</title>
-  <meta name="generator" content="hexo-theme-yilia-plus">
-        <style>
-/* From extension zhuangtongfa.material-theme */
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body {
-  box-sizing: border-box;
-  min-width: 200px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
-  background-color: initial;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  color: initial;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
-  color: inherit;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre code {
-  color: initial;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code > div {
-  background: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table td {
-  border: 1px solid rgba(171, 178, 191, 0.5) !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-active-line:before {
-  border-left: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-line:hover:before {
-  border-left: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body.showEditorSelection .code-line .code-line:hover:before {
-  border-left: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-/* Generated from 'node_modules/github-markdown-css/github-markdown.css' */
-@font-face {
-  font-family: octicons-link;
-  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format("woff");
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  color: #abb2bf;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  line-height: 1.5;
-  word-wrap: break-word;
-  background: #282c34;
-  padding-top: 20px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c {
-  color: #6a737d;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-v {
-  color: #005cc5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-e, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-en {
-  color: #6f42c1;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-smi, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-s1 {
-  color: #24292e;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ent {
-  color: #22863a;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-k {
-  color: #d73a49;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-pds, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-s .pl-pse .pl-s1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-cce, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-sre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-sra {
-  color: #032f62;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-v, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-smw {
-  color: #e36209;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-bu {
-  color: #b31d28;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ii {
-  color: #fafbfc;
-  background-color: #b31d28;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c2 {
-  color: #fafbfc;
-  background-color: #d73a49;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-c2::before {
-  content: "^M";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sr .pl-cce {
-  font-weight: bold;
-  color: #22863a;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ml {
-  color: #735c0f;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mh, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mh .pl-en, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ms {
-  font-weight: bold;
-  color: #005cc5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi {
-  font-style: italic;
-  color: #24292e;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mb {
-  font-weight: bold;
-  color: #24292e;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-md {
-  color: #b31d28;
-  background-color: #ffeef0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi1 {
-  color: #22863a;
-  background-color: #f0fff4;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mc {
-  color: #e36209;
-  background-color: #ffebda;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mi2 {
-  color: #f6f8fa;
-  background-color: #005cc5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-mdr {
-  font-weight: bold;
-  color: #6f42c1;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-ba {
-  color: #586069;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-sg {
-  color: #959da5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-corl {
-  text-decoration: underline;
-  color: #032f62;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .octicon {
-  display: inline-block;
-  vertical-align: text-top;
-  fill: currentColor;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a {
-  background-color: transparent;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:active, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:hover {
-  outline-width: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
-  font-weight: inherit;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
-  font-weight: bolder;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img {
-  border-style: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
-  font: inherit;
-  margin: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
-  overflow: visible;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body [type=checkbox] {
-  box-sizing: border-box;
-  padding: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body * {
-  box-sizing: border-box;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body input {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a {
-  color: #528bff;
-  text-decoration: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:hover {
-  text-decoration: underline;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body strong {
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #dfe2e5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr::before {
-  display: table;
-  content: "";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body td, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body th {
-  padding: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
-  font-size: 32px;
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 {
-  font-size: 24px;
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 {
-  font-size: 20px;
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 {
-  font-size: 16px;
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 {
-  font-size: 14px;
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
-  font-size: 12px;
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
-  margin: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol {
-  list-style-type: lower-roman;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol ol {
-  list-style-type: lower-alpha;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dd {
-  margin-left: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 12px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .octicon {
-  vertical-align: text-bottom;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-0 {
-  padding-left: 0 !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-1 {
-  padding-left: 4px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-2 {
-  padding-left: 8px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-3 {
-  padding-left: 16px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-4 {
-  padding-left: 24px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-5 {
-  padding-left: 32px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .pl-6 {
-  padding-left: 40px !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body::before {
-  display: table;
-  content: "";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body > *:first-child {
-  margin-top: 0 !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body > *:last-child {
-  margin-bottom: 0 !important;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .anchor {
-  float: left;
-  padding-right: 4px;
-  margin-left: -20px;
-  line-height: 1;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .anchor:focus {
-  outline: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body p, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
-  height: 0.25em;
-  padding: 0;
-  margin: 24px 0;
-  background-color: #e1e4e8;
-  border: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote {
-  /* padding: 0 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5; */
-  padding: 8.5px 17px;
-  margin: 1.5em 0;
-  font-size: inherit;
-  color: #7c879c;
-  border-color: #4b5362;
-  border-width: 4px;
-  border-left: 5px solid #4b5362;
-  background: transparent;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote > :first-child {
-  margin-top: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body blockquote > :last-child {
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: solid 1px #c6cbd1;
-  border-bottom-color: #959da5;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #959da5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: #f0f0f0;
-  border-bottom: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 .octicon-link {
-  color: #1b1f23;
-  vertical-align: middle;
-  visibility: hidden;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5:hover .anchor, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6:hover .anchor {
-  text-decoration: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5:hover .anchor .octicon-link, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6:hover .anchor .octicon-link {
-  visibility: visible;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h1 {
-  padding-bottom: 0.3em;
-  font-size: 2em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.5em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h3 {
-  font-size: 1.25em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h4 {
-  font-size: 1em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h5 {
-  font-size: 0.875em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body h6 {
-  font-size: 0.85em;
-  color: #6a737d;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol {
-  padding-left: 2em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ul, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ul ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ol, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li {
-  word-wrap: break-all;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li > p {
-  margin-top: 16px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body li + li {
-  margin-top: 0.25em;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl {
-  padding: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 600;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th {
-  font-weight: 700;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table th, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table td {
-  padding: 6px 13px;
-  /* border: 1px solid #dfe2e5; */
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table tr {
-  /* background-color: #fff; */
-  /* border-top: 1px solid #c6cbd1; */
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body table tr:nth-child(2n) {
-  /* background-color: #f6f8fa; */
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img {
-  max-width: 100%;
-  box-sizing: content-box;
-  display: block;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img[align=right] {
-  padding-left: 20px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body img[align=left] {
-  padding-right: 20px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: #3a3f4b;
-  border-radius: 3px;
-  color: white;
-  margin: 0 1px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  word-wrap: normal;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight {
-  margin-bottom: 16px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .highlight pre, .vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  /* background-color: #f6f8fa; */
-  border-radius: 3px;
-  background-color: #31363f;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body pre code {
-  display: inline;
-  max-width: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
-  color: #abb2bf;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .full-commit .btn-outline:not(:disabled):hover {
-  color: #005cc5;
-  border-color: #005cc5;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  line-height: 10px;
-  color: #444d56;
-  vertical-align: middle;
-  background-color: #fafbfc;
-  border: solid 1px #d1d5da;
-  border-bottom-color: #c6cbd1;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #c6cbd1;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body :checked + .radio-label {
-  position: relative;
-  z-index: 1;
-  border-color: #0366d6;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item {
-  list-style-type: none;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item + .task-list-item {
-  margin-top: 3px;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body .task-list-item input {
-  margin: 0 0.2em 0.25em -1.6em;
-  vertical-align: middle;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"].vscode-body hr {
-  border-bottom-color: #eee;
-}
-
-/*
-
-Atom One Dark by Daniel Gamage
-Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
-
-base:    #282c34
-mono-1:  #abb2bf
-mono-2:  #818896
-mono-3:  #5c6370
-hue-1:   #56b6c2
-hue-2:   #61aeee
-hue-3:   #c678dd
-hue-4:   #98c379
-hue-5:   #e06c75
-hue-5-2: #be5046
-hue-6:   #d19a66
-hue-6-2: #e6c07b
-
-*/
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #abb2bf;
-  background: #282c34;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-comment,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-quote {
-  color: #5c6370;
-  font-style: italic;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-doctag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-keyword,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-formula {
-  color: #c678dd;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-section,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-name,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-tag,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-deletion,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-subst {
-  color: #e06c75;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-literal {
-  color: #56b6c2;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-string,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-regexp,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-addition,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-attribute,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-meta-string {
-  color: #98c379;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-built_in,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-class .hljs-title {
-  color: #e6c07b;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-template-variable,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-type,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-class,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-attr,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-pseudo,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-number {
-  color: #d19a66;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-symbol,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-bullet,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-link,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-meta,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-selector-id,
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-title {
-  color: #61aeee;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-emphasis {
-  font-style: italic;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-strong {
-  font-weight: bold;
-}
-.vscode-dark[data-vscode-theme-name="One Dark Pro"] .hljs-link {
-  text-decoration: underline;
-}
-
-</style>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
-<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-<style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        </style>
-        <style>
-.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
-</style>
-        
-        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
-        
-    <link rel="alternate" href="/atom.xml" title="SFARL的博客" type="application/atom+xml">
-</head>
-    <body class="vscode-light">
-        <hr>
-<h2 id="title-数学物理方程复习date-2020-07-04-173628tags-数学物理方程-课程复习">title: 数学物理方程复习
-date: 2020-07-04 17:36:28
-tags: [数学物理方程,  课程复习]</h2>
-<p>目录</p>
-<!-- GFM-TOC -->
-<ul>
-<li><a href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">基本概念</a></li>
-<li><a href="#%E4%BA%8C%E9%98%B6%E6%96%B9%E7%A8%8B%E7%9A%84%E7%89%B9%E5%BE%81%E7%90%86%E8%AE%BA%E5%92%8C%E5%88%86%E7%B1%BB">二阶方程的特征理论和分类</a></li>
-<li><a href="#%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95">分离变量法</a></li>
-<li><a href="#%E5%8F%8C%E6%9B%B2%E5%9E%8B%E6%96%B9%E7%A8%8B">双曲型方程</a></li>
-<li><a href="#%E6%8A%9B%E7%89%A9%E5%9E%8B%E6%96%B9%E7%A8%8B">抛物型方程</a></li>
-<li><a href="#%E6%A4%AD%E5%9C%86%E5%BD%A2%E6%96%B9%E7%A8%8B">椭圆形方程</a></li>
-</ul>
-<!-- GFM-TOC -->
-    
-    <a class="article-more-a" href="/2020/08/07/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/08/07/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><span class="toc-number">1.</span> <span class="toc-text">CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Machine-­Level-Programming"><span class="toc-number">1.1.</span> <span class="toc-text">3.Machine-­Level-Programming</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BASIC"><span class="toc-number">1.1.1.</span> <span class="toc-text">BASIC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Turning-C-into-Object-Code"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">Turning C into Object Code</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#反汇编器"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">反汇编器</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Assembly-Basics-Registers-operands-move"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">Assembly Basics: Registers, operands, move</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Arithmetic-amp-logical-operations"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">Arithmetic &amp; logical operations</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#control"><span class="toc-number">1.1.2.</span> <span class="toc-text">control</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Condition-codes"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">Condition codes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Conditional-branches"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">Conditional branches</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Loops"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">Loops</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#switch-statements"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">switch statements</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#procedures"><span class="toc-number">1.1.3.</span> <span class="toc-text">procedures</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#stack-structure"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">stack structure</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Calling-Conventions"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">Calling Conventions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#illustration-of-recursion"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">illustration of recursion</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#data"><span class="toc-number">1.1.4.</span> <span class="toc-text">data</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Arrays"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">Arrays</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#structures"><span class="toc-number">1.1.5.</span> <span class="toc-text">structures</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Alignment-Principles"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">Alignment Principles</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#floating-point"><span class="toc-number">1.1.6.</span> <span class="toc-text">floating point</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缓冲区溢出"><span class="toc-number">1.1.7.</span> <span class="toc-text">缓冲区溢出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对抗缓冲区溢出攻击"><span class="toc-number">1.1.7.1.</span> <span class="toc-text">对抗缓冲区溢出攻击</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-数据挖掘复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/08/01/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%A4%8D%E4%B9%A0/">数据挖掘复习</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/08/01/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2020-08-01T01:36:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>本科课程数据挖掘与统计决策的复习。</p>
-<p>目录</p>
-<!-- GFM-TOC -->
-<ul>
-<li><a href="#绪论和python">绪论和python</a></li>
-<li><a href="#回归模型">回归模型</a></li>
-<li><a href="#聚类模型">聚类模型</a></li>
-<li><a href="#关联规则">关联规则</a></li>
-<li><a href="#决策树">决策树</a></li>
-<li><a href="#支持向量机">支持向量机</a></li>
-<li><a href="#贝叶斯网络">贝叶斯网络</a></li>
-<li><a href="#神经网络">神经网络</a></li>
-<li><a href="#EM算法">EM算法</a></li>
-<li><a href="#奇异值分解">奇异值分解</a><!-- GFM-TOC -->
-    
-    <a class="article-more-a" href="/2020/08/01/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%A4%8D%E4%B9%A0/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据挖掘</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">课程复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/08/01/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%A4%8D%E4%B9%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-偏微分复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/07/04/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/">数学物理方程复习</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/07/04/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2020-07-04T09:36:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>目录</p>
-<!-- GFM-TOC -->
-<ul>
-<li><a href="#基本概念">基本概念</a></li>
-<li><a href="#二阶方程的特征理论和分类">二阶方程的特征理论和分类</a></li>
-<li><a href="#分离变量法">分离变量法</a></li>
-<li><a href="#双曲型方程">双曲型方程</a></li>
-<li><a href="#抛物型方程">抛物型方程</a></li>
-<li><a href="#椭圆形方程">椭圆形方程</a><!-- GFM-TOC -->
-    
-    <a class="article-more-a" href="/2020/07/04/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">课程复习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数学物理方程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/07/04/%E5%81%8F%E5%BE%AE%E5%88%86%E5%A4%8D%E4%B9%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据库复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/">数据库复习</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2020-06-29T09:36:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>这是本科数据库课程的复习。考试内容主要是数据库的基本概念，数据库设计数据库系统的优化和恢复。至于设计底层的数据库管理系统原理，坑先挖了，日后补，是我计划中的一门课程。</p>
-<p>目录</p>
-<!-- GFM-TOC -->
-<ul>
-<li><a href="#绪论">绪论</a></li>
-<li><a href="#关系数据库">关系数据库</a></li>
-<li><a href="#关系数据库标准语言SQL">SQL</a></li>
-<li><a href="#关系查询和查询优化">关系查询和查询优化</a></li>
-<li><a href="#数据库安全性">数据库安全性</a></li>
-<li><a href="#数据库完整性">数据库完整性</a></li>
-<li><a href="#数据库恢复技术">数据库恢复技术</a></li>
-<li><a href="#并发控制">并发控制</a><!-- GFM-TOC -->
-    
-    <a class="article-more-a" href="/2020/06/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">课程复习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E4%B9%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-dataming_project" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/27/dataming_project/">数据挖掘课程设计</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/27/dataming_project/" class="archive-article-date">
-        <time datetime="2020-06-27T09:36:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>最近结束了数据挖掘的课程设计，做的内容比较简单，是MNIST手写数据集的识别（课程要求），这篇主要是写写其中的一些心得和体会。</p>
-<p>项目是我和彭同学一起做的，两个人，他负责用SVM识别，我用MLP和CNN，下面的心得体会是我和他的共同体会，SVM部分的体会来自于他，神经网络部分来自我。</p>
-    
-    <a class="article-more-a" href="/2020/06/27/dataming_project/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据挖掘</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">课程设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/27/dataming_project/">展开全文 >></a>
-    </p>
-    
 
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
-  
-    <article id="casapp-csapp lab1" class="article article-type-casapp  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/20/csapp%20lab1/">csapp lab1 datalab</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/20/csapp%20lab1/" class="archive-article-date">
-        <time datetime="2020-06-20T09:36:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="LAB-1"><a href="#LAB-1" class="headerlink" title="LAB 1"></a>LAB 1</h3><p>这一个 lab 主要涉及了位运算，补码和浮点数等内容。个人觉得不算容易，因为限定了算子和操作数,从比特的层面实现一些功能。</p>
-<h4 id="1-用非和且实现异或"><a href="#1-用非和且实现异或" class="headerlink" title="1. 用非和且实现异或"></a>1. 用非和且实现异或</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * bitXor - x^y using only ~ and &amp; </span></span><br><span class="line"><span class="comment"> *   Example: bitXor(4, 5) = 1</span></span><br><span class="line"><span class="comment"> *   Legal ops: ~ &amp;</span></span><br><span class="line"><span class="comment"> *   Max ops: 14</span></span><br><span class="line"><span class="comment"> *   Rating: 1</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bitXor</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 异或，按位取反后取且</span></span><br><span class="line">  <span class="keyword">return</span> (~x&amp;y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/06/20/csapp%20lab1/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">lab</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">csapp</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/20/csapp%20lab1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-csapp-chapter1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/13/csapp-chapter1/">csapp_chapter1</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/13/csapp-chapter1/" class="archive-article-date">
-        <time datetime="2020-06-13T11:24:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-13</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p>
-<ol>
-<li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li>
-<li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a><h2 id="1-COURSE-OVERVIEW"><a href="#1-COURSE-OVERVIEW" class="headerlink" title="1.COURSE-OVERVIEW"></a>1.COURSE-OVERVIEW</h2>从编程者的角度来讲述计算机系统。这也是为什么我第一门课选择这个的原因，因为自己是数学系的，之前学习的内容主要是偏向于算法和一些比较抽象的编程，没这么关注到计算机的底层实现（也许是大计基没上心。。。）所以选择这门课做为第一门补充课，希望能对计算机系统有个整体的认识，虽说自己之后是打算做数据挖掘，但对于基础的东西个人觉得还是需要有所了解。</li>
-</ol>
-<h3 id="主要内容包括："><a href="#主要内容包括：" class="headerlink" title="主要内容包括："></a>主要内容包括：</h3><ol>
-<li>COMPUTER ARITHMETIC (计算机算术规则)</li>
-<li>ASSEMBLY (汇编)</li>
-<li>MEMORY (内存)</li>
-<li>ASYMPTOTIC COMPLEXITY (渐近性?)</li>
-<li>IO (写入写出)</li>
-</ol>
-    
-    <a class="article-more-a" href="/2020/06/13/csapp-chapter1/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网课</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSAPP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第一章</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/13/csapp-chapter1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
 
-
-
-  
-    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/05/git/">使用github和hexo搭建博客</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/05/git/" class="archive-article-date">
-        <time datetime="2020-06-05T00:56:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-05</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>为什么是windows下呢，其实linux我也在虚拟机上对比过，发现git bash 和ubuntu 的命令行是没什么区别的（应该说是我没发现问题，毕竟用的比较浅。)</p>
-<p>git bash的安装和使用可以看这个<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git-pro</a>这是我个人觉得非常好的介绍，有中文版。</p>
-<p>关于命令行的操作，git bash的使用和linux的控制台一致，入门可以看这<a href="https://missing-semester-cn.github.io" target="_blank" rel="noopener">The Missing Semester of Your CS Education</a>，带有中文版，视频可以在b站上面找。反正我学完后日常操作没碰到什么困难。</p>
-<p>有了这两个，git bash的操作就没问题了。</p>
-    
-    <a class="article-more-a" href="/2020/06/05/git/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/05/git/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/04/hello-world/">大家好哇</a>
-	
-    </h1>
   
-
-
+  <div id="gitment-ctn"></div>
   
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
-<a href="/2020/06/04/hello-world/" class="archive-article-date">
-        <time datetime="2020-06-04T07:22:11.211Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-04</time>
-</a>
+  <script>
+    <!-- id: "csapp_chapter2" -->
+    var gitment = new Gitment({
+      id: "20200902181720",
+      owner: 'SFARL',
+      repo: 'comment',
+      oauth: {
+        client_id: 'a0e0c3814f04b51bacb1',
+        client_secret: 'cb3b264b4e47fc273892e24847f29679fd548bee',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
 
-  
-  
-    
 
   
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="第一篇博客，介绍一下自己写博客的初衷。"><a href="#第一篇博客，介绍一下自己写博客的初衷。" class="headerlink" title="第一篇博客，介绍一下自己写博客的初衷。"></a>第一篇博客，介绍一下自己写博客的初衷。</h2><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>其实我想写博客的想法很久之前就有了，但因为各种各样的原因耽误了，其实主要是自己不迫切。想记录一些自己的生活，学习心得，同时锻炼自己的文笔。大学以后，生活虽说多姿多彩，但偶尔回望记得却不太多，只记得一些事件，而忘记了许多珍贵的细节。学东西总是在输入，很少输出，导致自己也不太清楚学懂没。</p>
-<p>这次碰上疫情，打乱了自己许多计划，在找暑期实习的时候，也找到了自己今后想发展的方向，却发现自己的知识储备和能力并不足以让我通过面试。于是便打算等大四开始，没课了，便好好的补救补救，本来博客按计划也是在大四的时候再开始的。但时不待我，准备了许久托福考试取消，期末考试安排到8月低，打乱了我的实习，中美关系迅速恶劣。我在前年初得计划基本被破坏的一干二净，不得已，只能加快自己的步伐，加速！！<br><img src="/assets/photos/visa.png" alt=""></p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>博客主要分享的是一些cs基础课的上课理解和作业，算是数学转大数据开发的记录吧，偶尔穿插一些游记？日记？</p>
-<p>更新频率的话大概一周一次吧，将知识融会贯通并输出并不是件容易的事情，定下个固定更新频率也是对自己的一种监督，希望能坚持下去。</p>
-<h2 id="日后再更"><a href="#日后再更" class="headerlink" title="日后再更"></a>日后再更</h2>
-    
-
-    
 
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">初衷</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/first//" class="article-tag-list-link color1">first</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/04/hello-world/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -1979,8 +598,8 @@ tags: [数学物理方程,  课程复习]</h2>
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
