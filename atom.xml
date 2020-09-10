@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sfarl.github.io/"/>
-  <updated>2020-09-02T10:23:08.078Z</updated>
+  <updated>2020-09-10T14:31:55.999Z</updated>
   <id>sfarl.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>csapp_chapter5</title>
+    <link href="sfarl.github.io/2020/09/10/csapp-chapter5/"/>
+    <id>sfarl.github.io/2020/09/10/csapp-chapter5/</id>
+    <published>2020-09-10T11:17:20.000Z</published>
+    <updated>2020-09-10T14:31:55.999Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p><ol><li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li><li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a><h2 id="3-Machine-­Level-Programming"><a href="#3-Machine-­Level-Programming" class="headerlink" title="3.Machine-­Level-Programming"></a>3.Machine-­Level-Programming</h2></li></ol><h2 id="5-program-optimization"><a href="#5-program-optimization" class="headerlink" title="5. program optimization"></a>5. program optimization</h2><p>本章探讨如何优化程序的性能。</p><a id="more"></a><h3 id="optimizing-compiler"><a href="#optimizing-compiler" class="headerlink" title="optimizing compiler"></a>optimizing compiler</h3><p>编译器对代码的优化主要分为下述几个部分：</p><ol><li>寄存器分配</li><li>代码的排序</li><li>消除无用代码</li><li>消除低效率</li></ol><p>但编译器优化也存在局限性：</p><ol><li>受限于基础代码</li><li>许多优化只是基于单个处理过程</li><li>许多分析基于静态信息。</li></ol><h3 id="Generally-Useful-Optimizations"><a href="#Generally-Useful-Optimizations" class="headerlink" title="Generally Useful Optimizations"></a>Generally Useful Optimizations</h3><h4 id="code-motion"><a href="#code-motion" class="headerlink" title="code motion"></a>code motion</h4><p>通过移动代码，通常是出入循环，减少相同的计算。</p><h4 id="reduction-in-strength"><a href="#reduction-in-strength" class="headerlink" title="reduction in strength"></a>reduction in strength</h4><ol><li>用简单的操作代替复杂的操作。（加代替乘）</li><li>共用表达式</li><li>减少函数调用，对需要重复调用且结果相同的用一个变量存起来。（数组长度）</li><li>减少频繁内存读取，写入。</li></ol><h4 id="memory-aliasing"><a href="#memory-aliasing" class="headerlink" title="memory aliasing"></a>memory aliasing</h4><p>两个不太的内存引用了同一个地址，这在c中很常见，因为c允许进行地址计算，可以通过指针直达内存。</p><p>措施:在循环中的累加使用临时变量。</p><h3 id="Modern-CPU-Design"><a href="#Modern-CPU-Design" class="headerlink" title="Modern CPU Design"></a>Modern CPU Design</h3><p>现代处理器逻辑图。</p><p><img src="https://s1.ax1x.com/2020/09/10/wYZiIP.png" alt="CPU"></p><p>现代处理器是对多条指令并行执行，但若想提高性能，需要设计程序不存在序列依赖。</p><h4 id="unrolling"><a href="#unrolling" class="headerlink" title="unrolling"></a>unrolling</h4><p>通过循环张开，提高并行性，因为pipeline的存在，可同时并行多个加和乘，所以可以有效提升性能。但并行太多会导致寄存器溢出，调用堆栈，降低性能。</p><h4 id="branch-prediction"><a href="#branch-prediction" class="headerlink" title="branch prediction"></a>branch prediction</h4><p>通过预测未来的指令，提高性能，若预测错误，则清空（fetched）。但不会影响内存数据。</p><h3 id="其余提升"><a href="#其余提升" class="headerlink" title="其余提升"></a>其余提升</h3><ol><li>加载和储存的性能。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。&quot;&gt;&lt;a href=&quot;#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。&quot; class=&quot;headerlink&quot; title=&quot;CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。&quot;&gt;&lt;/a&gt;CSAPP 和 CMU Introduction to computer system (&lt;a href=&quot;http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CS 15-213&lt;/a&gt; 2015 fall) 的笔记。&lt;/h1&gt;&lt;p&gt;相关资料&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://csapp.cs.cmu.edu/3e/students.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Textbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/question/30315894&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;在vscode上使用C&lt;/a&gt;&lt;h2 id=&quot;3-Machine-­Level-Programming&quot;&gt;&lt;a href=&quot;#3-Machine-­Level-Programming&quot; class=&quot;headerlink&quot; title=&quot;3.Machine-­Level-Programming&quot;&gt;&lt;/a&gt;3.Machine-­Level-Programming&lt;/h2&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;5-program-optimization&quot;&gt;&lt;a href=&quot;#5-program-optimization&quot; class=&quot;headerlink&quot; title=&quot;5. program optimization&quot;&gt;&lt;/a&gt;5. program optimization&lt;/h2&gt;&lt;p&gt;本章探讨如何优化程序的性能。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="网课" scheme="sfarl.github.io/tags/%E7%BD%91%E8%AF%BE/"/>
+    
+      <category term="CSAPP" scheme="sfarl.github.io/tags/CSAPP/"/>
+    
+      <category term="第五章" scheme="sfarl.github.io/tags/%E7%AC%AC%E4%BA%94%E7%AB%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>csapp_chapter2</title>

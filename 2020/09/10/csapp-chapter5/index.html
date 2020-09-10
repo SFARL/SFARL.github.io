@@ -6,19 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="sfarl.github.io">
-  <title>Tag: 第一章 | SFARL的博客</title>
+  <title>csapp_chapter5 | SFARL的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="华南理工大学17级">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SFARL的博客">
-<meta property="og:url" content="sfarl.github.io/tags/%E7%AC%AC%E4%B8%80%E7%AB%A0/index.html">
+  <meta name="description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C3.Machine-­Level-Programming  5. program optimization本章探讨如何优化程序的性能。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="csapp_chapter5">
+<meta property="og:url" content="sfarl.github.io/2020/09/10/csapp-chapter5/index.html">
 <meta property="og:site_name" content="SFARL的博客">
-<meta property="og:description" content="华南理工大学17级">
+<meta property="og:description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C3.Machine-­Level-Programming  5. program optimization本章探讨如何优化程序的性能。">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/10/wYZiIP.png">
+<meta property="article:published_time" content="2020-09-10T11:17:20.000Z">
+<meta property="article:modified_time" content="2020-09-10T14:31:55.999Z">
 <meta property="article:author" content="SFARL">
-<meta property="article:tag" content="“数学，数据库，数据挖掘”">
+<meta property="article:tag" content="网课">
+<meta property="article:tag" content="CSAPP">
+<meta property="article:tag" content="第五章">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/09/10/wYZiIP.png">
   
     <link rel="alternative" href="/atom.xml" title="SFARL的博客" type="application/atom+xml">
   
@@ -178,41 +184,161 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-csapp-chapter5" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/13/csapp-chapter1/" class="archive-article-date">
-        <time datetime="2020-06-13T11:24:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/13/csapp-chapter1/">csapp_chapter1</a>
-	
+    <h1 class="article-title" itemprop="name">
+      csapp_chapter5
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/09/10/csapp-chapter5/" class="archive-article-date">
+        <time datetime="2020-09-10T11:17:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-10</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">429字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p>
+<ol>
+<li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li>
+<li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a><h2 id="3-Machine-­Level-Programming"><a href="#3-Machine-­Level-Programming" class="headerlink" title="3.Machine-­Level-Programming"></a>3.Machine-­Level-Programming</h2></li>
+</ol>
+<h2 id="5-program-optimization"><a href="#5-program-optimization" class="headerlink" title="5. program optimization"></a>5. program optimization</h2><p>本章探讨如何优化程序的性能。</p>
+<a id="more"></a>
+
+
+<h3 id="optimizing-compiler"><a href="#optimizing-compiler" class="headerlink" title="optimizing compiler"></a>optimizing compiler</h3><p>编译器对代码的优化主要分为下述几个部分：</p>
+<ol>
+<li>寄存器分配</li>
+<li>代码的排序</li>
+<li>消除无用代码</li>
+<li>消除低效率</li>
+</ol>
+<p>但编译器优化也存在局限性：</p>
+<ol>
+<li>受限于基础代码</li>
+<li>许多优化只是基于单个处理过程</li>
+<li>许多分析基于静态信息。</li>
+</ol>
+<h3 id="Generally-Useful-Optimizations"><a href="#Generally-Useful-Optimizations" class="headerlink" title="Generally Useful Optimizations"></a>Generally Useful Optimizations</h3><h4 id="code-motion"><a href="#code-motion" class="headerlink" title="code motion"></a>code motion</h4><p>通过移动代码，通常是出入循环，减少相同的计算。</p>
+<h4 id="reduction-in-strength"><a href="#reduction-in-strength" class="headerlink" title="reduction in strength"></a>reduction in strength</h4><ol>
+<li>用简单的操作代替复杂的操作。（加代替乘）</li>
+<li>共用表达式</li>
+<li>减少函数调用，对需要重复调用且结果相同的用一个变量存起来。（数组长度）</li>
+<li>减少频繁内存读取，写入。</li>
+</ol>
+<h4 id="memory-aliasing"><a href="#memory-aliasing" class="headerlink" title="memory aliasing"></a>memory aliasing</h4><p>两个不太的内存引用了同一个地址，这在c中很常见，因为c允许进行地址计算，可以通过指针直达内存。</p>
+<p>措施:在循环中的累加使用临时变量。</p>
+<h3 id="Modern-CPU-Design"><a href="#Modern-CPU-Design" class="headerlink" title="Modern CPU Design"></a>Modern CPU Design</h3><p>现代处理器逻辑图。</p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wYZiIP.png" alt="CPU"></p>
+<p>现代处理器是对多条指令并行执行，但若想提高性能，需要设计程序不存在序列依赖。</p>
+<h4 id="unrolling"><a href="#unrolling" class="headerlink" title="unrolling"></a>unrolling</h4><p>通过循环张开，提高并行性，因为pipeline的存在，可同时并行多个加和乘，所以可以有效提升性能。但并行太多会导致寄存器溢出，调用堆栈，降低性能。</p>
+<h4 id="branch-prediction"><a href="#branch-prediction" class="headerlink" title="branch prediction"></a>branch prediction</h4><p>通过预测未来的指令，提高性能，若预测错误，则清空（fetched）。但不会影响内存数据。</p>
+<h3 id="其余提升"><a href="#其余提升" class="headerlink" title="其余提升"></a>其余提升</h3><ol>
+<li>加载和储存的性能。</li>
+</ol>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/blogImg/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/blogImg/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          SFARL
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="sfarl.github.io/2020/09/10/csapp-chapter5/" title="csapp_chapter5" target="_blank">sfarl.github.io/2020/09/10/csapp-chapter5/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -226,25 +352,149 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第一章</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第五章</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:sfarl.github.io/2020/09/10/csapp-chapter5/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/02/csapp-chapter2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">csapp_chapter2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><span class="toc-number">1.</span> <span class="toc-text">CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Machine-­Level-Programming"><span class="toc-number">1.1.</span> <span class="toc-text">3.Machine-­Level-Programming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-program-optimization"><span class="toc-number">1.2.</span> <span class="toc-text">5. program optimization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#optimizing-compiler"><span class="toc-number">1.2.1.</span> <span class="toc-text">optimizing compiler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generally-Useful-Optimizations"><span class="toc-number">1.2.2.</span> <span class="toc-text">Generally Useful Optimizations</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#code-motion"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">code motion</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#reduction-in-strength"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">reduction in strength</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#memory-aliasing"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">memory aliasing</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modern-CPU-Design"><span class="toc-number">1.2.3.</span> <span class="toc-text">Modern CPU Design</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#unrolling"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">unrolling</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#branch-prediction"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">branch prediction</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其余提升"><span class="toc-number">1.2.4.</span> <span class="toc-text">其余提升</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div id="gitment-ctn"></div>
+  
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "csapp_chapter5" -->
+    var gitment = new Gitment({
+      id: "20200910191720",
+      owner: 'SFARL',
+      repo: 'comment',
+      oauth: {
+        client_id: 'a0e0c3814f04b51bacb1',
+        client_secret: 'cb3b264b4e47fc273892e24847f29679fd548bee',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
+  
+
 
 
           </div>
@@ -285,9 +535,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
