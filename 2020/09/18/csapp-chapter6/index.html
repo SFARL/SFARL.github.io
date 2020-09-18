@@ -6,23 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="sfarl.github.io">
-  <title>SFARL的博客</title>
+  <title>csapp_chapter6 | SFARL的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="“数学，数据库，数据挖掘”">
-    <meta name="description" content="华南理工大学17级"> -->
-  
-  <meta name="description" content="华南理工大学17级">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SFARL的博客">
-<meta property="og:url" content="sfarl.github.io/page/2/index.html">
+  <meta name="description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C  6.The-Memory-Hierarchy由于计算机访问不同层次的结构的存储器时间不同，理解存储器层次结构，对程序的性能有巨大影响。整章的关键思想是局部性（locality），指程序倾向于访问相同的数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="csapp_chapter6">
+<meta property="og:url" content="sfarl.github.io/2020/09/18/csapp-chapter6/index.html">
 <meta property="og:site_name" content="SFARL的博客">
-<meta property="og:description" content="华南理工大学17级">
+<meta property="og:description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C  6.The-Memory-Hierarchy由于计算机访问不同层次的结构的存储器时间不同，理解存储器层次结构，对程序的性能有巨大影响。整章的关键思想是局部性（locality），指程序倾向于访问相同的数据">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/13/w0LjLq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wBb6Vf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wBqPIO.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wBOEDI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wBjCXd.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wrROFs.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wrhmZD.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wrobjI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wrT93j.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wrLau9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wsPHnf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/14/wskhh4.png">
+<meta property="article:published_time" content="2020-09-18T08:48:20.000Z">
+<meta property="article:modified_time" content="2020-09-18T08:50:07.006Z">
 <meta property="article:author" content="SFARL">
-<meta property="article:tag" content="“数学，数据库，数据挖掘”">
+<meta property="article:tag" content="网课">
+<meta property="article:tag" content="CSAPP">
+<meta property="article:tag" content="第六章">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/09/13/w0LjLq.png">
   
     <link rel="alternative" href="/atom.xml" title="SFARL的博客" type="application/atom+xml">
   
@@ -182,49 +195,196 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-csapp-chapter6" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/05/git/">使用github和hexo搭建博客</a>
-	
+    <h1 class="article-title" itemprop="name">
+      csapp_chapter6
     </h1>
   
 
 
   
   
-<a href="/2020/06/05/git/" class="archive-article-date">
-        <time datetime="2020-06-05T00:56:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-05</time>
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/09/18/csapp-chapter6/" class="archive-article-date">
+        <time datetime="2020-09-18T08:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-18</time>
 </a>
 
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>为什么是windows下呢，其实linux我也在虚拟机上对比过，发现git bash 和ubuntu 的命令行是没什么区别的（应该说是我没发现问题，毕竟用的比较浅。)</p>
-<p>git bash的安装和使用可以看这个<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git-pro</a>这是我个人觉得非常好的介绍，有中文版。</p>
-<p>关于命令行的操作，git bash的使用和linux的控制台一致，入门可以看这<a href="https://missing-semester-cn.github.io" target="_blank" rel="noopener">The Missing Semester of Your CS Education</a>，带有中文版，视频可以在b站上面找。反正我学完后日常操作没碰到什么困难。</p>
-<p>有了这两个，git bash的操作就没问题了。</p>
-    
-    <a class="article-more-a" href="/2020/06/05/git/#more">展开全文 >></a>
-    
-    
+    <h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p>
+<ol>
+<li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li>
+<li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a></li>
+</ol>
+<h2 id="6-The-Memory-Hierarchy"><a href="#6-The-Memory-Hierarchy" class="headerlink" title="6.The-Memory-Hierarchy"></a>6.The-Memory-Hierarchy</h2><p>由于计算机访问不同层次的结构的存储器时间不同，理解存储器层次结构，对程序的性能有巨大影响。整章的关键思想是局部性（locality），指程序倾向于访问相同的数据集或者邻近的数据集。</p>
+<a id="more"></a>
+<h3 id="Storage-technologies-and-trends"><a href="#Storage-technologies-and-trends" class="headerlink" title="Storage technologies and trends"></a>Storage technologies and trends</h3><h4 id="Random-­Access-Memory-（RAM）"><a href="#Random-­Access-Memory-（RAM）" class="headerlink" title="Random-­Access Memory （RAM）"></a>Random-­Access Memory （RAM）</h4><p>随机访问存储器，分为静态的SRAM和动态的DRAM，SRAM更快更贵，访问速度快10倍。</p>
+<p><img src="https://s1.ax1x.com/2020/09/13/w0LjLq.png" alt="SRAM-vs-DRAM"></p>
+<h3 id="NonvolaCle-Memories"><a href="#NonvolaCle-Memories" class="headerlink" title="NonvolaCle Memories"></a>NonvolaCle Memories</h3><p>非易失性存储器，即断电后仍然可以保存信息，整体上称为ROM（只读存储器）。</p>
+<h4 id="Uses-for-NonvolaCle-Memories"><a href="#Uses-for-NonvolaCle-Memories" class="headerlink" title="Uses for NonvolaCle Memories"></a>Uses for NonvolaCle Memories</h4><ol>
+<li>bios，网卡，磁盘控制器，gpu，</li>
+<li>ssd（solid state disks）</li>
+<li>磁盘缓存</li>
+</ol>
+<h3 id="Traditional-Bus-Structure-Connecting-CPU-and-Memory"><a href="#Traditional-Bus-Structure-Connecting-CPU-and-Memory" class="headerlink" title="Traditional Bus Structure Connecting  CPU and Memory"></a>Traditional Bus Structure Connecting  CPU and Memory</h3><p>通过总线（bus）</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wBb6Vf.png" alt="bus"></p>
+<h3 id="disk"><a href="#disk" class="headerlink" title="disk"></a>disk</h3><p>磁盘广泛应用的大量数据存储设备。</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wBqPIO.png" alt="disk"></p>
+<p>由于现代磁盘构造复杂，有多个盘面，盘面上有不同的记录区。于是就有了逻辑分区，存储在磁盘控制器上的映射（surface， track， sector）</p>
+<h3 id="I-O-Bus"><a href="#I-O-Bus" class="headerlink" title="I/O Bus"></a>I/O Bus</h3><p><img src="https://s1.ax1x.com/2020/09/14/wBOEDI.png" alt="io-bus"></p>
+<p>IO总线与底层cpu无关，尽管比系统总线，内存总线慢，但兼容更多的第三方设备。</p>
+<h3 id="SSD"><a href="#SSD" class="headerlink" title="SSD"></a>SSD</h3><p>SSD是基于闪存的存储技术，是传统旋转磁盘的有力替代品。（快，贵）</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wBjCXd.png" alt="ssd"></p>
+<ol>
+<li>一个闪存有块（block）和页（plage）组成。</li>
+<li>数据以页为单位读写，读比写快。(擦除时间较长)</li>
+<li>只有在一页完全擦除后才能写入。</li>
+<li>一个块大约可以进行100000词重复写。</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2020/09/14/wrROFs.png" alt="存储速度对比"></p>
+<h3 id="Locality-of-reference"><a href="#Locality-of-reference" class="headerlink" title="Locality of reference"></a>Locality of reference</h3><p>局部性通常分为两种不同的形式。</p>
+<ol>
+<li>时间局部性（temporal locality）：被引用过一次的内存位置很可能在不远的将来被再次引用。</li>
+<li>空间局部性（spatial locality）：被引用过的内存位置附近很可能被再次引用。</li>
+</ol>
+<h4 id="data-reference"><a href="#data-reference" class="headerlink" title="data reference"></a>data reference</h4><ol>
+<li>数组按序访问（spatial）</li>
+<li>对一个变量重复引用（temporal）</li>
+</ol>
+<h4 id="instruction-reference"><a href="#instruction-reference" class="headerlink" title="instruction reference"></a>instruction reference</h4><ol>
+<li>循环体内的指令（spatial）</li>
+<li>循环被执行多次（temporal）</li>
+</ol>
+<h3 id="Caching-in-the-memory-hierarchy"><a href="#Caching-in-the-memory-hierarchy" class="headerlink" title="Caching in the memory hierarchy"></a>Caching in the memory hierarchy</h3><p>由于存储技术硬件的差异和程序局部性的特性，计算机科学家设计了组织存储器系统的方法——存储器层次结构。</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wrhmZD.png" alt="memory-hierarchies"></p>
+<p>每一层的缓存都源自于上一层。越往上，越小，越快。</p>
+<p><strong>通过这样的层次结构，用便宜的储存器在底部构造了大的储存池，但程序的数据处理速度接近顶部的缓存。（这样做能成是因为局部性）</strong></p>
+<h4 id="types-of-cache-misses"><a href="#types-of-cache-misses" class="headerlink" title="types of cache misses"></a>types of cache misses</h4><ol>
+<li>cold miss：当cache空的时候</li>
+<li>conflict miss：因为硬件缓存采用严格的放置策略（随机放置定位成本太高）k+1层的某个块放置在k层的块中，会导致对象被映射到同意个块中，一直不命中。</li>
+<li>capacity miss：缓冲块不够大。</li>
+</ol>
+<h3 id="Cache-memory-organization-and-operation"><a href="#Cache-memory-organization-and-operation" class="headerlink" title="Cache memory organization and operation"></a>Cache memory organization and operation</h3><p>缓冲器结构</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wrobjI.png" alt="cache-organization"></p>
+<p>怎么看地址，tag是在行中定位（E）定位，set index 是在块中定位（S），b是偏移量。</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wrT93j.png" alt=""></p>
+<p>为什么用中间的位做索引：因为可以避免连续的地址映射到同一个缓存区（conflict miss）</p>
+<p>置换的原则通常是LRU（least recently used）</p>
+<h4 id="write"><a href="#write" class="headerlink" title="write"></a>write</h4><p>命中时的写入分两种</p>
+<ol>
+<li>write-through：立刻写入内存</li>
+<li>write-back：写入缓存，等被更换时再写入内存。</li>
+</ol>
+<p>不命中的写入</p>
+<ol>
+<li>write-allocate：读进缓存，更新缓存</li>
+<li>直接写入内存。</li>
+</ol>
+<p>缓存的性能</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wrLau9.png" alt="缓存性能"></p>
+<h3 id="Performance-impact-of-caches"><a href="#Performance-impact-of-caches" class="headerlink" title="Performance impact of caches"></a>Performance impact of caches</h3><p>全书的封面，memory mountain，程序以步长stride扫描数组头elems个元素来产生读序列。然后返回测试出的吞吐量。</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wsPHnf.png" alt="memory-mountain"></p>
+<h4 id="Rearranging-loops-to-improve-spacial-locality"><a href="#Rearranging-loops-to-improve-spacial-locality" class="headerlink" title="Rearranging loops to improve spacial locality"></a>Rearranging loops to improve spacial locality</h4><p>通过调整矩阵循环的顺序提高空间局部性，其中典型的是矩阵乘法。</p>
+<p>C语言数组的存储是行存储。对一个矩阵，行遍历的miss rate 是1/B当矩阵维度大于bolcksize的时候。但列遍历的话是1.</p>
+<p>$$C_{ij} = \sum_k a_{ik} * b_{kj}$$</p>
+<p>这里b会涉及到列遍历。通过把k放在循环最顶层，消除列遍历。</p>
+<p><img src="https://s1.ax1x.com/2020/09/14/wskhh4.png" alt="matrix-multiplication"></p>
+<h4 id="Using-blocking-to-improve-temporal-locality"><a href="#Using-blocking-to-improve-temporal-locality" class="headerlink" title="Using blocking to improve temporal locality"></a>Using blocking to improve temporal locality</h4><p>通过块的方法，提高时间局部性。</p>
+<p>将数据分成一块块的，使得整块载入缓存计算，完成所有读写，然后下一个块。但是代码非常难写。</p>
 
     
 
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/blogImg/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/blogImg/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          SFARL
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="sfarl.github.io/2020/09/18/csapp-chapter6/" title="csapp_chapter6" target="_blank">sfarl.github.io/2020/09/18/csapp-chapter6/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -236,15 +396,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网课</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSAPP</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第六章</a>
         		</li>
       		
 		</ul>
@@ -253,16 +413,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/05/git/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:sfarl.github.io/2020/09/18/csapp-chapter6/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/10/csapp-chapter5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">csapp_chapter5</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -277,118 +497,56 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/04/hello-world/">大家好哇</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/04/hello-world/" class="archive-article-date">
-        <time datetime="2020-06-04T07:22:11.211Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-04</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="第一篇博客，介绍一下自己写博客的初衷。"><a href="#第一篇博客，介绍一下自己写博客的初衷。" class="headerlink" title="第一篇博客，介绍一下自己写博客的初衷。"></a>第一篇博客，介绍一下自己写博客的初衷。</h2><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>其实我想写博客的想法很久之前就有了，但因为各种各样的原因耽误了，其实主要是自己不迫切。想记录一些自己的生活，学习心得，同时锻炼自己的文笔。大学以后，生活虽说多姿多彩，但偶尔回望记得却不太多，只记得一些事件，而忘记了许多珍贵的细节。学东西总是在输入，很少输出，导致自己也不太清楚学懂没。</p>
-<p>这次碰上疫情，打乱了自己许多计划，在找暑期实习的时候，也找到了自己今后想发展的方向，却发现自己的知识储备和能力并不足以让我通过面试。于是便打算等大四开始，没课了，便好好的补救补救，本来博客按计划也是在大四的时候再开始的。但时不待我，准备了许久托福考试取消，期末考试安排到8月低，打乱了我的实习，中美关系迅速恶劣。我在前年初得计划基本被破坏的一干二净，不得已，只能加快自己的步伐，加速！！<br><img src="/assets/photos/visa.png" alt=""></p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>博客主要分享的是一些cs基础课的上课理解和作业，算是数学转大数据开发的记录吧，偶尔穿插一些游记？日记？</p>
-<p>更新频率的话大概一周一次吧，将知识融会贯通并输出并不是件容易的事情，定下个固定更新频率也是对自己的一种监督，希望能坚持下去。</p>
-<h2 id="日后再更"><a href="#日后再更" class="headerlink" title="日后再更"></a>日后再更</h2>
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">初衷</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/first//" class="article-tag-list-link color1">first</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/04/hello-world/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><span class="toc-number">1.</span> <span class="toc-text">CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-The-Memory-Hierarchy"><span class="toc-number">1.1.</span> <span class="toc-text">6.The-Memory-Hierarchy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Storage-technologies-and-trends"><span class="toc-number">1.1.1.</span> <span class="toc-text">Storage technologies and trends</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Random-­Access-Memory-（RAM）"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">Random-­Access Memory （RAM）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NonvolaCle-Memories"><span class="toc-number">1.1.2.</span> <span class="toc-text">NonvolaCle Memories</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Uses-for-NonvolaCle-Memories"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">Uses for NonvolaCle Memories</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Traditional-Bus-Structure-Connecting-CPU-and-Memory"><span class="toc-number">1.1.3.</span> <span class="toc-text">Traditional Bus Structure Connecting  CPU and Memory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#disk"><span class="toc-number">1.1.4.</span> <span class="toc-text">disk</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I-O-Bus"><span class="toc-number">1.1.5.</span> <span class="toc-text">I&#x2F;O Bus</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSD"><span class="toc-number">1.1.6.</span> <span class="toc-text">SSD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Locality-of-reference"><span class="toc-number">1.1.7.</span> <span class="toc-text">Locality of reference</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#data-reference"><span class="toc-number">1.1.7.1.</span> <span class="toc-text">data reference</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#instruction-reference"><span class="toc-number">1.1.7.2.</span> <span class="toc-text">instruction reference</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Caching-in-the-memory-hierarchy"><span class="toc-number">1.1.8.</span> <span class="toc-text">Caching in the memory hierarchy</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#types-of-cache-misses"><span class="toc-number">1.1.8.1.</span> <span class="toc-text">types of cache misses</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cache-memory-organization-and-operation"><span class="toc-number">1.1.9.</span> <span class="toc-text">Cache memory organization and operation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#write"><span class="toc-number">1.1.9.1.</span> <span class="toc-text">write</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Performance-impact-of-caches"><span class="toc-number">1.1.10.</span> <span class="toc-text">Performance impact of caches</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Rearranging-loops-to-improve-spacial-locality"><span class="toc-number">1.1.10.1.</span> <span class="toc-text">Rearranging loops to improve spacial locality</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Using-blocking-to-improve-temporal-locality"><span class="toc-number">1.1.10.2.</span> <span class="toc-text">Using blocking to improve temporal locality</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
+
+
+
+
+
+
+
   
+  <div id="gitment-ctn"></div>
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
+  <script>
+    <!-- id: "csapp_chapter6" -->
+    var gitment = new Gitment({
+      id: "20200918164820",
+      owner: 'SFARL',
+      repo: 'comment',
+      oauth: {
+        client_id: 'a0e0c3814f04b51bacb1',
+        client_secret: 'cb3b264b4e47fc273892e24847f29679fd548bee',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
+  
+
 
 
           </div>
@@ -428,8 +586,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
