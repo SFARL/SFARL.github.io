@@ -6,28 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="sfarl.github.io">
-  <title>csapp_chapter6 | SFARL的博客</title>
+  <title>Tag: hadoop | SFARL的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C  linking从这章开始，后续主要是将程序和操作系统之间的交互关系。 linking（链接）是指将各种代码和数据片段收集并组合成一个单一文件的过程，然后加载到内存并执行。链接可以发生在编译，加载，甚至运行">
-<meta property="og:type" content="article">
-<meta property="og:title" content="csapp_chapter6">
-<meta property="og:url" content="sfarl.github.io/2020/09/21/csapp-chapter7/index.html">
+  <meta name="description" content="华南理工大学17级">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SFARL的博客">
+<meta property="og:url" content="sfarl.github.io/tags/hadoop/index.html">
 <meta property="og:site_name" content="SFARL的博客">
-<meta property="og:description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C  linking从这章开始，后续主要是将程序和操作系统之间的交互关系。 linking（链接）是指将各种代码和数据片段收集并组合成一个单一文件的过程，然后加载到内存并执行。链接可以发生在编译，加载，甚至运行">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/21/wbz7yq.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/21/wqSSp9.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/21/wqS961.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/21/wqiRwq.png">
-<meta property="article:published_time" content="2020-09-21T13:03:20.000Z">
-<meta property="article:modified_time" content="2020-09-21T13:06:55.319Z">
+<meta property="og:description" content="华南理工大学17级">
 <meta property="article:author" content="SFARL">
-<meta property="article:tag" content="网课">
-<meta property="article:tag" content="CSAPP">
-<meta property="article:tag" content="第七章">
+<meta property="article:tag" content="“数学，数据库，数据挖掘”">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/09/21/wbz7yq.png">
   
     <link rel="alternative" href="/atom.xml" title="SFARL的博客" type="application/atom+xml">
   
@@ -187,329 +178,69 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-csapp-chapter7" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2020/12/01/Hadoop/" class="archive-article-date">
+        <time datetime="2020-12-01T00:23:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-01</time>
+</a>
+
+        </div>
+    	 
   
-  
-    <h1 class="article-title" itemprop="name">
-      csapp_chapter6
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2020/12/01/Hadoop/">Hadoop总结</a>
+	
     </h1>
   
 
 
-  
-  
-        
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-
-<a href="/2020/09/21/csapp-chapter7/" class="archive-article-date">
-        <time datetime="2020-09-21T13:03:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-21</time>
-</a>
-
-  
-  
-    
-<div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <!-- fonts.scss -->
-      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
-      <i class="icon-statistics"></i>
-      <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">643字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="icon-book icon"></i>
-      <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
-    </span>
-  </span>
-</div>
-
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p>
-<ol>
-<li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li>
-<li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a></li>
-</ol>
-<h2 id="linking"><a href="#linking" class="headerlink" title="linking"></a>linking</h2><p>从这章开始，后续主要是将程序和操作系统之间的交互关系。</p>
-<p>linking（链接）是指将各种代码和数据片段收集并组合成一个单一文件的过程，然后加载到内存并执行。链接可以发生在编译，加载，甚至运行时。</p>
-<p>链接使得我们可以建立库，而不必每次编译一个大文件。</p>
-<p>学习链接知识的作用：</p>
-<ol>
-<li>构造大型程序</li>
-<li>避免bug</li>
-<li>理解语言的作用域</li>
-<li>理解其他的系统概念</li>
-<li>利用共享库</li>
-</ol>
-<p>链接器干什么？</p>
-<ol>
-<li>符号解析：全局变量和函数。存储在符号表中。</li>
-<li>重定位：将数据和代码合在一个节上。将内存分配给新的节。修改节中对符号的引用。</li>
-</ol>
-<a id="more"></a>
-<h3 id="Executable-and-Linkable-Format-ELF"><a href="#Executable-and-Linkable-Format-ELF" class="headerlink" title="Executable and Linkable Format (ELF)"></a>Executable and Linkable Format (ELF)</h3><p>ELF是标准的二进制格式的目标文件。</p>
-<p>三种目标文件</p>
-<p><img src="https://s1.ax1x.com/2020/09/21/wbz7yq.png" alt="三种目标文件"></p>
-<p>ELF 文件格式</p>
-<p><img src="https://s1.ax1x.com/2020/09/21/wqSSp9.png" alt="ELF"></p>
-<p><img src="https://s1.ax1x.com/2020/09/21/wqS961.png" alt="ELF2"></p>
-<h3 id="符号解析"><a href="#符号解析" class="headerlink" title="符号解析"></a>符号解析</h3><ul>
-<li>局部变量：局部变量存在栈中，局部静态变量存在.bbs（未初始化），.data中初始化的。</li>
-</ul>
-<p>若变量之间有重复定义的（可能发生在不同文件之间，会有比较的关系，而这有可能导致bug，比如说两个未初始化的同名全局变量。所以尽可能使用静态全局变量，不能被其他模块引用，减少bug发生。）</p>
-<h3 id="Loading-Executable-Object-Files"><a href="#Loading-Executable-Object-Files" class="headerlink" title="Loading Executable Object Files"></a>Loading Executable Object Files</h3><p>将可执行文件加载到内存</p>
-<p><img src="https://s1.ax1x.com/2020/09/21/wqiRwq.png" alt="EFL3"></p>
-<h3 id="lib"><a href="#lib" class="headerlink" title="lib"></a>lib</h3><h4 id="static-lib"><a href="#static-lib" class="headerlink" title="static lib"></a>static lib</h4><p>静态库，将相关的目标文件重定位到一个文件（archive）。例如: libc.a libm.a</p>
-<p>但是使用静态库需要注意引用的顺序，若存在依赖，被依赖的要前。</p>
-<p>而且静态库会造成存储和运行时的重复。而且需要定时更新和维护。</p>
-<h4 id="share-lib"><a href="#share-lib" class="headerlink" title="share lib"></a>share lib</h4><p>共享库是一个目标模块，在运行或加载时，可以加载到任意的内存地址，并和内存中的程序链接起来。linux中的.so，windows中的.ddl。</p>
-<p>值得注意的是，使用共享库，代码和数据节并没有被复制到可执行目标文件中，知识链接器复制了一些重定位和符号表的信息，使得运行时可以引用共享库中的代码和数据。</p>
-<h3 id="Library-Interpositioning"><a href="#Library-Interpositioning" class="headerlink" title="Library Interpositioning"></a>Library Interpositioning</h3><p>库插入？运行程序拦截对共享库的调用。</p>
-<p>可以发生在编译，链接，运行时。</p>
-<p>可以用来监控函数被调用次数，以及输入输出。</p>
-
-    
-
-    
-    <div class="page-reward">
-      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
-        <div class="tooltip tooltip-east">
-          <span class="tooltip-item">
-            赏
-          </span>
-          <span class="tooltip-content">
-            <span class="tooltip-text">
-              <span class="tooltip-inner">
-                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢老板<i
-                    class="icon icon-quo-right"></i></p>
-                <div class="reward-box">
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/assets/blogImg/alipay.jpg">
-                    <span class="reward-type">支付宝</span>
-                  </div>
-                  
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/assets/blogImg/weixin.jpg">
-                    <span class="reward-type">微信</span>
-                  </div>
-                  
-                </div>
-              </span>
-            </span>
-          </span>
-        </div>
-      </a>
-    </div>
-    
-
-    
-    <div class="declare"> 
-      <ul class="post-copyright">
-        <li>
-          <strong>本文作者：</strong>
-          SFARL
-        </li>
-        <li>
-          <strong>本文链接：</strong>
-          <a href="sfarl.github.io/2020/09/21/csapp-chapter7/" title="csapp_chapter6" target="_blank">sfarl.github.io/2020/09/21/csapp-chapter7/</a>
-        </li>
-        
-        <li>
-          <strong>版权声明： </strong>
+        <div class="article-info info-on-right">
           
-          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
-        </li>
-        
-      </ul>
-    </div>
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网课</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSAPP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第七章</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">bigdata</a>
         		</li>
       		
 		</ul>
 	</div>
 
-    
+          
 
-    
-
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:sfarl.github.io/2020/09/21/csapp-chapter7/" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-    
-    <div class="clearfix"></div>
-  </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-<nav id="article-nav">
-  
-    <a href="/2020/12/01/Hadoop/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hadoop总结
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/09/21/csapp-chapter8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">csapp_chapter8</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><span class="toc-number">1.</span> <span class="toc-text">CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linking"><span class="toc-number">1.1.</span> <span class="toc-text">linking</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Executable-and-Linkable-Format-ELF"><span class="toc-number">1.1.1.</span> <span class="toc-text">Executable and Linkable Format (ELF)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#符号解析"><span class="toc-number">1.1.2.</span> <span class="toc-text">符号解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loading-Executable-Object-Files"><span class="toc-number">1.1.3.</span> <span class="toc-text">Loading Executable Object Files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lib"><span class="toc-number">1.1.4.</span> <span class="toc-text">lib</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#static-lib"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">static lib</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#share-lib"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">share lib</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Library-Interpositioning"><span class="toc-number">1.1.5.</span> <span class="toc-text">Library Interpositioning</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-
-
-
-
-  
-  <div id="gitment-ctn"></div>
-  
-    <!-- 中文 -->
-    <link rel="stylesheet" href="/lib/gitment.css">
-    <script src="/lib/gitment.js"></script>
-  
-  <script>
-    <!-- id: "csapp_chapter6" -->
-    var gitment = new Gitment({
-      id: "20200921210320",
-      owner: 'SFARL',
-      repo: 'comment',
-      oauth: {
-        client_id: 'a0e0c3814f04b51bacb1',
-        client_secret: 'cb3b264b4e47fc273892e24847f29679fd548bee',
-      },
-    })
-    gitment.render('gitment-ctn')
-  </script>
-
-
+    </div></section>
   
 
+    
 
 
           </div>
@@ -550,9 +281,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

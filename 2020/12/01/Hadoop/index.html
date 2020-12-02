@@ -6,28 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="sfarl.github.io">
-  <title>csapp_chapter6 | SFARL的博客</title>
+  <title>Hadoop总结 | SFARL的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C  linking从这章开始，后续主要是将程序和操作系统之间的交互关系。 linking（链接）是指将各种代码和数据片段收集并组合成一个单一文件的过程，然后加载到内存并执行。链接可以发生在编译，加载，甚至运行">
+  <meta name="description" content="一些hadoop的原理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="csapp_chapter6">
-<meta property="og:url" content="sfarl.github.io/2020/09/21/csapp-chapter7/index.html">
+<meta property="og:title" content="Hadoop总结">
+<meta property="og:url" content="sfarl.github.io/2020/12/01/Hadoop/index.html">
 <meta property="og:site_name" content="SFARL的博客">
-<meta property="og:description" content="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。相关资料  Textbook 在vscode上使用C  linking从这章开始，后续主要是将程序和操作系统之间的交互关系。 linking（链接）是指将各种代码和数据片段收集并组合成一个单一文件的过程，然后加载到内存并执行。链接可以发生在编译，加载，甚至运行">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/21/wbz7yq.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/21/wqSSp9.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/21/wqS961.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/21/wqiRwq.png">
-<meta property="article:published_time" content="2020-09-21T13:03:20.000Z">
-<meta property="article:modified_time" content="2020-09-21T13:06:55.319Z">
+<meta property="og:description" content="一些hadoop的原理">
+<meta property="og:image" content="https://hadoop.apache.org/docs/stable/">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/01/DW5iVA.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/02/D45bDS.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/02/D5S5PP.png">
+<meta property="article:published_time" content="2020-12-01T00:23:45.000Z">
+<meta property="article:modified_time" content="2020-12-02T03:07:14.669Z">
 <meta property="article:author" content="SFARL">
-<meta property="article:tag" content="网课">
-<meta property="article:tag" content="CSAPP">
-<meta property="article:tag" content="第七章">
+<meta property="article:tag" content="hadoop">
+<meta property="article:tag" content="bigdata">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/09/21/wbz7yq.png">
+<meta name="twitter:image" content="https://hadoop.apache.org/docs/stable/">
   
     <link rel="alternative" href="/atom.xml" title="SFARL的博客" type="application/atom+xml">
   
@@ -187,14 +186,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-csapp-chapter7" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Hadoop" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      csapp_chapter6
+      Hadoop总结
     </h1>
   
 
@@ -206,8 +205,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/09/21/csapp-chapter7/" class="archive-article-date">
-        <time datetime="2020-09-21T13:03:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-21</time>
+<a href="/2020/12/01/Hadoop/" class="archive-article-date">
+        <time datetime="2020-12-01T00:23:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-01</time>
 </a>
 
   
@@ -220,7 +219,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">643字</span>
+      <span class="post-count">1.3k字</span>
     </span>
   </span>
 
@@ -229,7 +228,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -240,48 +239,63 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><a href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。" class="headerlink" title="CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。"></a>CSAPP 和 CMU Introduction to computer system (<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html" target="_blank" rel="noopener">CS 15-213</a> 2015 fall) 的笔记。</h1><p>相关资料</p>
-<ol>
-<li><a href="http://csapp.cs.cmu.edu/3e/students.html" target="_blank" rel="noopener">Textbook</a></li>
-<li><a href="https://www.zhihu.com/question/30315894" target="_blank" rel="noopener">在vscode上使用C</a></li>
-</ol>
-<h2 id="linking"><a href="#linking" class="headerlink" title="linking"></a>linking</h2><p>从这章开始，后续主要是将程序和操作系统之间的交互关系。</p>
-<p>linking（链接）是指将各种代码和数据片段收集并组合成一个单一文件的过程，然后加载到内存并执行。链接可以发生在编译，加载，甚至运行时。</p>
-<p>链接使得我们可以建立库，而不必每次编译一个大文件。</p>
-<p>学习链接知识的作用：</p>
-<ol>
-<li>构造大型程序</li>
-<li>避免bug</li>
-<li>理解语言的作用域</li>
-<li>理解其他的系统概念</li>
-<li>利用共享库</li>
-</ol>
-<p>链接器干什么？</p>
-<ol>
-<li>符号解析：全局变量和函数。存储在符号表中。</li>
-<li>重定位：将数据和代码合在一个节上。将内存分配给新的节。修改节中对符号的引用。</li>
-</ol>
+    <p>主要是基于官网上的内容<img src="https://hadoop.apache.org/docs/stable/" alt="Apache-Hadoop-3.2">进行总结，熟悉整体架构。</p>
+<p>Hadoop是以HDFS (Hadoop Distributed File System) 分布式文件系统存储文件，MapReduce提供计算框架。</p>
+<p>整体架构基于Google的GFS, MapReduce, BigTable. 进一步深入学习可以参照MIT6.824。</p>
+<p>目录</p>
+<!-- GFM-TOC -->
+<ul>
+<li><a href="#HDFS">1. HDFS</a></li>
+<li><a href="#MapReduce">2. MapReduce</a></li>
+<li><a href="#YARN">3. YARN</a><!-- GFM-TOC -->
 <a id="more"></a>
-<h3 id="Executable-and-Linkable-Format-ELF"><a href="#Executable-and-Linkable-Format-ELF" class="headerlink" title="Executable and Linkable Format (ELF)"></a>Executable and Linkable Format (ELF)</h3><p>ELF是标准的二进制格式的目标文件。</p>
-<p>三种目标文件</p>
-<p><img src="https://s1.ax1x.com/2020/09/21/wbz7yq.png" alt="三种目标文件"></p>
-<p>ELF 文件格式</p>
-<p><img src="https://s1.ax1x.com/2020/09/21/wqSSp9.png" alt="ELF"></p>
-<p><img src="https://s1.ax1x.com/2020/09/21/wqS961.png" alt="ELF2"></p>
-<h3 id="符号解析"><a href="#符号解析" class="headerlink" title="符号解析"></a>符号解析</h3><ul>
-<li>局部变量：局部变量存在栈中，局部静态变量存在.bbs（未初始化），.data中初始化的。</li>
+
+</li>
 </ul>
-<p>若变量之间有重复定义的（可能发生在不同文件之间，会有比较的关系，而这有可能导致bug，比如说两个未初始化的同名全局变量。所以尽可能使用静态全局变量，不能被其他模块引用，减少bug发生。）</p>
-<h3 id="Loading-Executable-Object-Files"><a href="#Loading-Executable-Object-Files" class="headerlink" title="Loading Executable Object Files"></a>Loading Executable Object Files</h3><p>将可执行文件加载到内存</p>
-<p><img src="https://s1.ax1x.com/2020/09/21/wqiRwq.png" alt="EFL3"></p>
-<h3 id="lib"><a href="#lib" class="headerlink" title="lib"></a>lib</h3><h4 id="static-lib"><a href="#static-lib" class="headerlink" title="static lib"></a>static lib</h4><p>静态库，将相关的目标文件重定位到一个文件（archive）。例如: libc.a libm.a</p>
-<p>但是使用静态库需要注意引用的顺序，若存在依赖，被依赖的要前。</p>
-<p>而且静态库会造成存储和运行时的重复。而且需要定时更新和维护。</p>
-<h4 id="share-lib"><a href="#share-lib" class="headerlink" title="share lib"></a>share lib</h4><p>共享库是一个目标模块，在运行或加载时，可以加载到任意的内存地址，并和内存中的程序链接起来。linux中的.so，windows中的.ddl。</p>
-<p>值得注意的是，使用共享库，代码和数据节并没有被复制到可执行目标文件中，知识链接器复制了一些重定位和符号表的信息，使得运行时可以引用共享库中的代码和数据。</p>
-<h3 id="Library-Interpositioning"><a href="#Library-Interpositioning" class="headerlink" title="Library Interpositioning"></a>Library Interpositioning</h3><p>库插入？运行程序拦截对共享库的调用。</p>
-<p>可以发生在编译，链接，运行时。</p>
-<p>可以用来监控函数被调用次数，以及输入输出。</p>
+<h1 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h1><p>HDFS是一款分布式文件系统，具有高容错，部署在低成本硬件。HDFS提供但堆应用数据的高吞吐。</p>
+<h2 id="Assumptions-and-Goals"><a href="#Assumptions-and-Goals" class="headerlink" title="Assumptions and Goals"></a>Assumptions and Goals</h2><ul>
+<li>Hardware Failure: 节点出错是不可避免的，因此需要快速的检测，自动恢复。</li>
+<li>Streaming Data Access: HDFS的数据设计为批量处理而不是与用户交互，强调高吞吐而不是低延迟。</li>
+<li>Large Data Sets</li>
+<li>Simple Coherency Model: HDFS的应用需要一个写一次，读多次的文件模型。除了追加和截断，不允许修改，追加只能在末尾。这假设简化了数据一致性问题，而且实现了高吞吐。</li>
+<li>Moving Computation is Cheaper than Moving Data：因为局部性，当数据存储邻近时，计算会更有效率，HDFS通常是迁移计算。</li>
+<li>Portability Across Heterogeneous Hardware and Software Platforms：为什么能被广泛应用的原因。</li>
+</ul>
+<h2 id="NameNode-and-DataNodes"><a href="#NameNode-and-DataNodes" class="headerlink" title="NameNode and DataNodes"></a>NameNode and DataNodes</h2><p>HDFS的架构如下：</p>
+<p><img src="https://s3.ax1x.com/2020/12/01/DW5iVA.png" alt="HDFS-ARCHITECT"></p>
+<p>是一个主从体系，一个集群由一个NameNode, 管理文件系统命名空间以及管理用户访问文件的主服务器，以及多个DataNodes。</p>
+<ul>
+<li>NameNode: 负责打开，关闭，重命名，目录以及映射到DataNodes。</li>
+<li>DataNode： 负责读，写，块的创造，删除，复制。</li>
+</ul>
+<h2 id="Data-Replication"><a href="#Data-Replication" class="headerlink" title="Data Replication"></a>Data Replication</h2><p>HDFS设计为在大集群上可靠性高得大型文件存储，将每个文件存储城一系列的文件块（通常128MB)。这些块除了最后一个都是同样大小。</p>
+<p>为了容错率，这些块需要复制，赘余存储在不同的DataNode中，NameNode做出所有关于复制的决定。NameNode定期的从DataNode接收Heartbeat（检测DataNode是否正常运行）和Blockreport（DataNode上包含的块的列表）。</p>
+<p><img src="https://s3.ax1x.com/2020/12/02/D45bDS.png" alt="Block-Replication"></p>
+<h3 id="replicate-placement"><a href="#replicate-placement" class="headerlink" title="replicate placement"></a>replicate placement</h3><p>HDFS的文件放置策略在权衡数据可靠性，可用性，网络带宽的利用性。</p>
+<p>通常情况下，复制因子为3，在写入的DataNode里有一份，同一机架另一个DataNode有一份，不同机架里的随机DataNode有一份。该策略减少了机架间的写流量，通常可以提高写性能。机架故障的机会远少于节点故障的机会，因此不会影响数据的可靠性和可用性保证。但是，由于一个块仅放置在两个唯一的机架中，而不是三个，因此它确实减少了读取数据时使用的总网络带宽。使用此策略，文件的副本不会在机架上均匀分布。三分之一的副本位于一个节点上，三分之二的副本位于一个机架上，其余三分之一则平均分布在其余机架上。此策略可提高写入性能，而不会影响数据可靠性或读取性能。</p>
+<h2 id="Robustness"><a href="#Robustness" class="headerlink" title="Robustness"></a>Robustness</h2><p>HDFS的主要目标是即使出现故障也能可靠地存储数据。三种常见的故障类型是NameNode故障，DataNode故障和网络分区故障。</p>
+<p>下面是一些支持HDFS鲁棒性的措施：</p>
+<ul>
+<li>Data Disk Failure, Heartbeats and Re-Replication</li>
+<li>Cluster Rebalancing</li>
+<li>Data Integrity</li>
+<li>Metadata Disk Failure：HDFS support maintaining multiple copies of the FsImage and EditLog.</li>
+<li>Snapshots: Snapshots support storing a copy of data at a particular instant of time. One usage of the snapshot feature may be to roll back a corrupted HDFS instance to a previously known good point in time.</li>
+</ul>
+<h1 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h1><p>Hadoop MapReduce是一个软件框架，用于编写应用程序，以可靠，容错的方式并行处理大型硬件集群（数千个节点）上的大量数据（TB数据集）。</p>
+<p>MapReduce通常将输入数据集拆分为独立的块，以完全并行的方式进行map。然后对map的输出进行排序，然后将其输入到reduce。通常，作业的输入和输出都存储在文件系统中。MapReduce负责安排任务，监视任务并重新执行失败的任务。</p>
+<p>通常来说，计算节点和存储节点都是相同的，MapReduce框架和HDFS跑在相同的节点上，这样运行MapReduce高效的安排任务。</p>
+<h2 id="Inputs-and-Outputs"><a href="#Inputs-and-Outputs" class="headerlink" title="Inputs and Outputs"></a>Inputs and Outputs</h2><p>MapReduce 仅对键值对&lt;key, value&gt;进行操作，输入输出都是键值对。</p>
+<h1 id="YARN"><a href="#YARN" class="headerlink" title="YARN"></a>YARN</h1><p>YARN的基本思想是将资源管理和作业调度分成分离的程序。</p>
+<p>YARN架构如下：</p>
+<p><img src="https://s3.ax1x.com/2020/12/02/D5S5PP.png" alt="YARN"></p>
+<p>ResourceManager 和 NodeManager 来自数据计算框架。ResourceManager 是系统中所有资源的最终权限。NodeManger 是每台机器框架代理，负责容器，见识资源使用状况，并报告给ResourceManager.</p>
+<p>每个 Application Master 是每个应用程序基于框架的特别的库，任务是与ResourceManager 协商与NodeManager执行和监管任务。</p>
+<p>ResourceManager由两个主要组成：Scheduler and ApplicationsManager.</p>
+<ul>
+<li>Schedule：负责将资源分配给各种正在运行的应用程序，但要遵循熟悉的容量，队列等约束。调度程序根据应用程序的资源需求执行调度功能；它基于资源容器的抽象概念来做到这一点，该容器包含诸如内存，cpu，磁盘，网络等元素。</li>
+<li>ApplicationsManager：负责接受作业提交，协商用于执行特定于应用程序的ApplicationMaster的第一个容器，并提供在发生故障时重新启动ApplicationMaster容器的服务。</li>
+</ul>
 
     
 
@@ -328,7 +342,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="sfarl.github.io/2020/09/21/csapp-chapter7/" title="csapp_chapter6" target="_blank">sfarl.github.io/2020/09/21/csapp-chapter7/</a>
+          <a href="sfarl.github.io/2020/12/01/Hadoop/" title="Hadoop总结" target="_blank">sfarl.github.io/2020/12/01/Hadoop/</a>
         </li>
         
         <li>
@@ -350,15 +364,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网课</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hadoop</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSAPP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第七章</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">bigdata</a>
         		</li>
       		
 		</ul>
@@ -414,7 +424,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:sfarl.github.io/2020/09/21/csapp-chapter7/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:sfarl.github.io/2020/12/01/Hadoop/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -429,18 +439,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/12/01/Hadoop/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hadoop总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/21/csapp-chapter8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">csapp_chapter8</div>
+    <a href="/2020/09/21/csapp-chapter7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">csapp_chapter6</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -467,7 +468,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSAPP-和-CMU-Introduction-to-computer-system-CS-15-213-2015-fall-的笔记。"><span class="toc-number">1.</span> <span class="toc-text">CSAPP 和 CMU Introduction to computer system (CS 15-213 2015 fall) 的笔记。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linking"><span class="toc-number">1.1.</span> <span class="toc-text">linking</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Executable-and-Linkable-Format-ELF"><span class="toc-number">1.1.1.</span> <span class="toc-text">Executable and Linkable Format (ELF)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#符号解析"><span class="toc-number">1.1.2.</span> <span class="toc-text">符号解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loading-Executable-Object-Files"><span class="toc-number">1.1.3.</span> <span class="toc-text">Loading Executable Object Files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lib"><span class="toc-number">1.1.4.</span> <span class="toc-text">lib</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#static-lib"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">static lib</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#share-lib"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">share lib</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Library-Interpositioning"><span class="toc-number">1.1.5.</span> <span class="toc-text">Library Interpositioning</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HDFS"><span class="toc-number">1.</span> <span class="toc-text">HDFS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Assumptions-and-Goals"><span class="toc-number">1.1.</span> <span class="toc-text">Assumptions and Goals</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NameNode-and-DataNodes"><span class="toc-number">1.2.</span> <span class="toc-text">NameNode and DataNodes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Replication"><span class="toc-number">1.3.</span> <span class="toc-text">Data Replication</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#replicate-placement"><span class="toc-number">1.3.1.</span> <span class="toc-text">replicate placement</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Robustness"><span class="toc-number">1.4.</span> <span class="toc-text">Robustness</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MapReduce"><span class="toc-number">2.</span> <span class="toc-text">MapReduce</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Inputs-and-Outputs"><span class="toc-number">2.1.</span> <span class="toc-text">Inputs and Outputs</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#YARN"><span class="toc-number">3.</span> <span class="toc-text">YARN</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -494,9 +495,9 @@
     <script src="/lib/gitment.js"></script>
   
   <script>
-    <!-- id: "csapp_chapter6" -->
+    <!-- id: "Hadoop总结" -->
     var gitment = new Gitment({
-      id: "20200921210320",
+      id: "20201201082345",
       owner: 'SFARL',
       repo: 'comment',
       oauth: {
